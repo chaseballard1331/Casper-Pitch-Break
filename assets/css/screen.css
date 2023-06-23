@@ -113,8 +113,7 @@ production stylesheet in assets/built/screen.css
     z-index: 100;
     display: flex;
     align-items: center;
-    padding-top: calc(19vmin + 44px);
-    padding-bottom: 19vmin;
+    padding-top: calc(1vmin + 44px);
     text-align: center;
     color: var(--color-darkgrey);
 }
