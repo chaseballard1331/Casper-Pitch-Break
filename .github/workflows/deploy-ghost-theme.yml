@@ -8,7 +8,26 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Compile CSS
+        run: yarn compile-css
+
+      - name: Build theme
+        run: yarn build
+
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1
         with:
