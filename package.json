@@ -116,7 +116,7 @@
             },
             "show_publication_cover": {
                 "type": "boolean",
-                "default": true,
+                "default": false,
                 "group": "homepage"
             },
             "header_style": {
@@ -126,7 +126,7 @@
                     "Left aligned",
                     "Hidden"
                 ],
-                "default": "Center aligned",
+                "default": "Hidden",
                 "group": "homepage"
             },
             "feed_layout": {
@@ -136,7 +136,7 @@
                     "Grid",
                     "List"
                 ],
-                "default": "Classic",
+                "default": "Grid",
                 "group": "homepage"
             },
             "color_scheme": {
