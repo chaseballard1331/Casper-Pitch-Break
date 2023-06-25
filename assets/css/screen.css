@@ -454,7 +454,7 @@ production stylesheet in assets/built/screen.css
 .gh-head-menu .nav a {
     display: inline-block;
     line-height: 1.7;
-    color: green;
+    color: --ghost-accent-color !important;
 }
 
 .gh-head-menu .nav a:hover {
