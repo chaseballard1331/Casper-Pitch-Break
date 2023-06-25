@@ -23,14 +23,9 @@
     display: block;
     height: 100%;
     padding-left: 10px;
-    font-size: 4rem;
-    font-weight: 700;
-    color: green !important;
+    font-size: 24px;
+    color: green;
     animation: spin_words 8s infinite;
-}
-.hero-heading{
-  font-size: 24px;
-  font-weight: 500;
 }
 @keyframes spin_words{
     10%{
@@ -103,7 +98,7 @@
   }
   
   .p-hero p {
-    font-size: 4rem;
+    font-size: 24px;
     line-height: 1.5;
   }
   

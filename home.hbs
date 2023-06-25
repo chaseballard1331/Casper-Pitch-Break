@@ -29,6 +29,9 @@ into the {body} of the default.hbs template --}}
                     <h1 class="site-title">{{@site.title}}</h1>
                 {{/if}}
             {{/match}}
+            {{#if @site.description}}
+                <p class="site-description">{{@site.description}}</p>
+            {{/if}}
         </div>
     {{/match}}
 
@@ -41,7 +44,7 @@ into the {body} of the default.hbs template --}}
     <div class="p-inner p-hero">
         <div class="p-hero-left">
         <div class="wrapper">
-       <p class="hero-heading">Level up with insights and advice on</p>
+       <p>Level up with insights and advice on</p>
        <div class="words">
         <span class="span-rotate"></span>
         <span class="span-rotate">pitching</span>
