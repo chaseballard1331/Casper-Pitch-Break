@@ -96,7 +96,7 @@
                     "Logo in the middle",
                     "Stacked"
                 ],
-                "default": "Logo on cover"
+                "default": "Stacked"
             },
             "title_font": {
                 "type": "select",
