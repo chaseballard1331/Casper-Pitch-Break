@@ -69,17 +69,22 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed-header">
         <h2 class="post-feed-title">Recent Articles</h2>
         <div class="post-feed">
-            {{#foreach posts limit="5"}}  <!-- Add 'limit="5"' to limit the iteration to the most recent 5 posts -->
+            {{#foreach posts limit="5"}}  {{!-- Add 'limit="5"' to limit the iteration to the most recent 5 posts --}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-            {{/foreach}}
-        </div>
-        <div class="post-card explore-more-card">
-            <a href="/path-to-more-articles" class="explore-more-button"> Explore more articles </a>
-        </div>
 
+                {{!-- Add a new article for the 'Explore more articles' button --}}
+                {{#if @last}}
+                    <article class="post-card explore-more-card">
+                        <div class="explore-more-content">
+                        <a href="/path-to-more-articles" class="explore-more-button"> Explore more articles </a>
+                        </div>
+                    </article>
+                {{/if}}
+            {{/foreach}}
+        
         {{pagination}}
 
-    </div>
+        </div>
 </section>
 </main>
