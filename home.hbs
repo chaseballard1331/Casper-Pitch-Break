@@ -44,13 +44,14 @@ into the {body} of the default.hbs template --}}
     <div class="p-inner p-hero">
         <div class="p-hero-left">
             <div class="wrapper">
-                <p>Level up with insights and advice on</p>
+                <p>Level up with insights and advice on pitching, fundraising, and building.</p>
+                {{!-- Will add back in when working properly 
                 <div class="words">
                     <span class="span-rotate"></span>
                     <span class="span-rotate">pitching</span>
                     <span class="span-rotate">fundraising</span>
                     <span class="span-rotate">building</span>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="p-hero-left">
@@ -65,9 +66,10 @@ into the {body} of the default.hbs template --}}
 
 <section>
     <div class="inner posts">
-
+        <div class="post-feed-header">
+        <h2 class="post-feed-title">Recent Articles</h2>
         <div class="post-feed">
-            {{#foreach posts}}
+            {{#foreach posts limit="5"}}  <!-- Add 'limit="5"' to limit the iteration to the most recent 5 posts -->
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
             {{/foreach}}
