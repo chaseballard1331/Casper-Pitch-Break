@@ -588,8 +588,8 @@ production stylesheet in assets/built/screen.css
     font-weight: 600;
     letter-spacing: -0.005em;
     font-size: 1.6rem;
-    border-radius: 48px;
-    color: #fff;
+    border-radius: 4px;
+    color: #fff !important;
     background: var(--ghost-accent-color);
 }
 
