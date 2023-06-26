@@ -73,14 +73,14 @@ into the {body} of the default.hbs template --}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
-                {{!-- Add a new article for the 'Explore more articles' button --}}
+                {{!-- Add a new article for the 'Explore more articles' button
                 {{#if @last}}
                     <article class="post-card explore-more-card">
                         <div class="explore-more-content">
                         <a href="/path-to-more-articles" class="explore-more-button"> Explore more articles </a>
                         </div>
                     </article>
-                {{/if}}
+                {{/if}} --}}
             {{/foreach}}
         
         {{pagination}}
