@@ -1,13 +1,14 @@
 *,
 *:before,
-*:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 45px;
-    font-weight: 500;
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 45px;
+  font-weight: 500;
 }
+
 .wrapper {
   box-sizing: content-box;
   background-color: #ffffff;
@@ -17,179 +18,228 @@
   align-items: flex-end;
   width: 100%;
 }
-.words{
-    overflow: hidden;
+
+.words {
+  overflow: hidden;
 }
-.span-rotate{
-    display: block;
-    height: 100%;
-    padding-left: 10px;
-    font-size: 24px;
-    animation: spin_words 8s infinite;
+
+.span-rotate {
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 24px;
+  animation: spin_words 8s infinite;
 }
-@keyframes spin_words{
-    10%{
-        transform: translateY(-100%);
-    }
-    25%{
-        transform: translateY(-91%);
-    }
-    35%{
-        transform: translateY(-200%);
-    }
-    50%{
-        transform: translateY(-191%);
-    }
-    60%{
-        transform: translateY(-300%);
-    }
-    75%{
-        transform: translateY(-291%);
-    }
-    85%{
-        transform: translateY(-412%);
-    }
-    100%{
-        transform: translateY(-400%);
-    }
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-100%);
+  }
+
+  25% {
+    transform: translateY(-91%);
+  }
+
+  35% {
+    transform: translateY(-200%);
+  }
+
+  50% {
+    transform: translateY(-191%);
+  }
+
+  60% {
+    transform: translateY(-300%);
+  }
+
+  75% {
+    transform: translateY(-291%);
+  }
+
+  85% {
+    transform: translateY(-412%);
+  }
+
+  100% {
+    transform: translateY(-400%);
+  }
 }
+
 /* These styles override the Casper navbar defaults */
 .home-template * {
-    color: #000;
-  }
-  
-  .home-template.has-cover .gh-head-button {
-    color: #fff;
-    background-color: var(--color-darkgrey);
-  }
-  
-  /* Define the size of the sections */
-  .p-outer {
-    padding: 14vmin max(4vmin, 20px) 0;
-  }
-  
-  .p-inner {
-    max-width: 1200px; /* Defines the max width of your content */
-    margin-inline: auto; /* Centers the content */
-  }
-  
-  /* Hero section */
+  color: #000;
+}
+
+.home-template.has-cover .gh-head-button {
+  color: #fff;
+  background-color: var(--color-darkgrey);
+}
+
+/* Define the size of the sections */
+.p-outer {
+  padding: 14vmin max(4vmin, 20px) 0;
+}
+
+.p-inner {
+  max-width: 1200px;
+  /* Defines the max width of your content */
+  margin-inline: auto;
+  /* Centers the content */
+}
+
+/* Hero section */
+.p-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2vmin;
+}
+
+.p-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Ensures buttons are at the bottom of the container */
+}
+
+.p-hero-right img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  /* Fills the container with the image */
+  transform: translateY(24px);
+  /* Move the image slightly to create an offset effect */
+}
+
+.p-hero h1 {
+  text-transform: uppercase;
+}
+
+.p-hero p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.p-hero p+p {
+  margin-top: 1.6rem;
+}
+
+.p-hero-left a {
+  color: var(--ghost-accent-color);
+  /* Color links with the Ghost accent color defined in Admin */
+}
+
+.p-hero-buttons {
+  display: flex;
+  gap: 1.6rem;
+  margin-block-start: 8vmin;
+}
+
+.p-hero-buttons button,
+.p-hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.005em;
+  background-color: var(--ghost-accent-color);
+  border: 3px solid var(--ghost-accent-color);
+  border-radius: 6px;
+}
+
+.p-hero-buttons a {
+  color: var(--ghost-accent-color);
+  background-color: transparent;
+  border: 3px solid;
+  transition: all 0.2s;
+}
+
+.p-hero-buttons a:hover {
+  color: #fff;
+  background-color: var(--ghost-accent-color);
+  border-color: var(--ghost-accent-color);
+}
+
+/* Posts */
+.p-post-container {
+  margin-block: 10.2vmin;
+  margin-inline: auto;
+}
+
+.p-post-container h2 {
+  text-transform: uppercase;
+}
+
+.p-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Define a post grid, where cards can be minimum 300px and maximum the size of the column */
+  gap: 4vmin;
+}
+
+.p-post-card img {
+  width: 100%;
+  max-height: 500px;
+  aspect-ratio: 16 / 9;
+  /* All images will have an HD image ratio */
+  object-fit: cover;
+}
+
+.p-post-card h3 {
+  padding-inline: 10px;
+  margin-block: 10px 0;
+}
+
+.p-post-card a:hover {
+  color: var(--ghost-accent-color);
+}
+
+/* Change layout at larger viewport sizes */
+@media (min-width: 768px) {
   .p-hero {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 3.2vmin;
+    /* Hero section has 1 columns */
   }
-  
-  .p-hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures buttons are at the bottom of the container */
-  }
-  
-  .p-hero-right img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover; /* Fills the container with the image */
-    transform: translateY(24px); /* Move the image slightly to create an offset effect */
-  }
-  
-  .p-hero h1 {
-    text-transform: uppercase;
-  }
-  
-  .p-hero p {
-    font-size: 24px;
-    line-height: 1.5;
-  }
-  
-  .p-hero p + p {
-    margin-top: 1.6rem;
-  }
-  
-  .p-hero-left a {
-    color: var(--ghost-accent-color); /* Color links with the Ghost accent color defined in Admin */
-  }
-  
+
   .p-hero-buttons {
-    display: flex;
-    gap: 1.6rem;
-    margin-block-start: 8vmin;
+    transform: translateY(50%);
+    /* Offset buttons */
   }
-  
-  .p-hero-buttons button,
-  .p-hero-buttons a {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 16px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: -0.005em;
-    background-color: var(--ghost-accent-color);
-    border: 3px solid var(--ghost-accent-color);
-    border-radius: 6px;
+
+  .p-hero-right img {
+    max-height: none;
+    aspect-ratio: 1 / 1;
+    /* Make the image a square */
+    filter: drop-shadow(2px 3px 10px rgb(0 0 0 / 0.25));
+    /* Add a shadow*/
+    object-fit: contain;
+    /* But also ensure it's not cropped */
+    object-position: right;
+    /* Position image to far right */
   }
-  
-  .p-hero-buttons a {
-    color: var(--ghost-accent-color);
-    background-color: transparent;
-    border: 3px solid;
-    transition: all 0.2s;
-  }
-  
-  .p-hero-buttons a:hover {
-    color: #fff;
-    background-color: var(--ghost-accent-color);
-    border-color: var(--ghost-accent-color);
-  }
-  
-  /* Posts */
-  .p-post-container {
-    margin-block: 10.2vmin;
-    margin-inline: auto;
-  }
-  
-  .p-post-container h2 {
-    text-transform: uppercase;
-  }
-  
-  .p-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define a post grid, where cards can be minimum 300px and maximum the size of the column */
-    gap: 4vmin;
-  }
-  
-  .p-post-card img {
-    width: 100%;
-    max-height: 500px;
-    aspect-ratio: 16 / 9; /* All images will have an HD image ratio */
-    object-fit: cover;
-  }
-  
-  .p-post-card h3 {
-    padding-inline: 10px;
-    margin-block: 10px 0;
-  }
-  
-  .p-post-card a:hover {
-    color: var(--ghost-accent-color);
-  }
-  
-  /* Change layout at larger viewport sizes */
-  @media (min-width: 768px) {
-    .p-hero {
-      grid-template-columns: 1fr; /* Hero section has 1 columns */
-    }
-  
-    .p-hero-buttons {
-      transform: translateY(50%); /* Offset buttons */
-    }
-  
-    .p-hero-right img {
-      max-height: none;
-      aspect-ratio: 1 / 1; /* Make the image a square */
-      filter: drop-shadow(2px 3px 10px rgb(0 0 0 / 0.25)); /* Add a shadow*/
-      object-fit: contain; /* But also ensure it's not cropped */
-      object-position: right; /* Position image to far right */
-    }
-  }
+}
+
+/* Style for the 'Explore more articles' card */
+.explore-more-card {
+  /* Use the same styling as your other post cards, e.g., */
+  width: 100%;
+  height: 100%;
+  /* or set a fixed height if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+}
+
+/* Style for the 'Explore more articles' button */
+.explore-more-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--ghost-accent-color); 
+  color: white;
+  border: none;
+  cursor: pointer;
+}
