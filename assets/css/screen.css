@@ -963,7 +963,7 @@ production stylesheet in assets/built/screen.css
     align-items: center;
     gap: 3px;
     padding-left: 18px;
-    color: var(--ghost-accent-color);
+    color: var(--ghost-accent-color) !important;
 }
 
 .post-card-featured svg {
