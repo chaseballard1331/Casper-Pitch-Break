@@ -70,10 +70,8 @@ into the {body} of the default.hbs template --}}
         <h2 class="post-feed-title">Recent Pitch Breakdown</h2>
         <div class="post-feed">
             {{#get "posts" limit="3" include="tags" filter="tags:[pitch-breakdown]"}}
-                {{#foreach posts limit="3"}}
-                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{#foreach posts}}
                     {{> "post-card"}}
-                    {{#if @last}}
                 {{/foreach}}
             {{/get}}
         {{pagination}}
@@ -87,10 +85,8 @@ into the {body} of the default.hbs template --}}
         <h2 class="post-feed-title">Recent Articles</h2>
         <div class="post-feed">
             {{#get "posts" limit="3" include="tags" filter="tags:[foundry]"}}
-                {{#foreach posts limit="3"}}
-                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{#foreach posts}}
                     {{> "post-card"}}
-                    {{#if @last}}
                 {{/foreach}}
             {{/get}}
         
