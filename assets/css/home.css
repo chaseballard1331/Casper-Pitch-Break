@@ -231,9 +231,10 @@
   font-size: 4em;
   color: green;
   opacity: 0.3;
-  animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  filter: blur(4px); /* Adding blur */
+  animation-duration: 20s; /* Making the animation slower */
 }
 
 .shape1 {
@@ -268,25 +269,26 @@
 
 @keyframes moveShape1 {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(150vw, 150vh); }
+  100% { transform: translate(120vw, 180vh); }
 }
 
 @keyframes moveShape2 {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(-150vw, 150vh); }
+  100% { transform: translate(-180vw, 120vh); }
 }
 
 @keyframes moveShape3 {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(150vw, -150vh); }
+  100% { transform: translate(90vw, -150vh); }
 }
 
 @keyframes moveShape4 {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(-150vw, -150vh); }
+  100% { transform: translate(-120vw, -90vh); }
 }
 
 @keyframes moveShape5 {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(150vw, 50vh); }
+  100% { transform: translate(170vw, 70vh); }
 }
+
