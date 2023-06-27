@@ -8,41 +8,52 @@ into the {body} tag of the default.hbs template --}}
 {{!-- Everything inside the #post block pulls data from the post --}}
 
 <main id="site-main" class="site-main">
-    <article class="article {{post_class}} {{#match @custom.post_image_style "Full"}}image-full{{else match @custom.post_image_style "=" "Small"}}image-small{{/match}}">
+<article class="article {{post_class}} {{#match @custom.post_image_style "Full"}}image-full{{else match @custom.post_image_style "=" "Small"}}image-small{{/match}}">
 
-        <header class="article-header gh-canvas">
+    <header class="article-header gh-canvas">
 
-            <!-- Date Published and Reading Time -->
+        <div class="article-tag post-card-tags">
+            {{#primary_tag}}
+                <span class="post-card-primary-tag">
+                    <a href="{{url}}">{{name}}</a>
+                </span>
+            {{/primary_tag}}
+            {{#if featured}}
+                <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+            {{/if}}
+        </div>
+
+        <h1 class="article-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="article-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                {{#foreach authors}}
+                <li class="author-list-item">
+                    {{#if profile_image}}
+                    <a href="{{url}}" class="author-avatar">
+                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                    </a>
+                    {{else}}
+                    <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                    {{/if}}
+                </li>
+                {{/foreach}}
+            </ul>
+
             <div class="article-byline-meta">
+                <h4 class="author-name">{{authors}}</h4>
                 <div class="byline-meta-content">
-                    <time class="byline-meta-date" datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>
+                    <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                     {{#if reading_time}}
                         <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
                     {{/if}}
                 </div>
-            </div>
-
-            <!-- Title -->
-            <h1 class="article-title">{{title}}</h1>
-
-            <!-- Byline with photo and name -->
-            <div class="article-byline">
-                <section class="article-byline-content">
-                    <ul class="author-list">
-                        {{#foreach authors}}
-                        <li class="author-list-item">
-                            {{#if profile_image}}
-                                <a href="{{url}}" class="author-avatar">
-                                    <img class="author-profile-image" src="{{img_url profile_image size='xs'}}" alt="{{name}}" />
-                                </a>
-                            {{else}}
-                                <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
-                            {{/if}}
-                            <h4 class="author-name">{{name}}</h4>
-                        </li>
-                        {{/foreach}}
-                    </ul>
-                </section>
             </div>
 
         </section>
