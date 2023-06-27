@@ -77,7 +77,7 @@
 
 /* Define the size of the sections */
 .p-outer {
-  padding: 8vmin max(4vmin, 20px) 10vmin;
+  padding: 5vmin max(4vmin, 20px) 5vmin;
 }
 
 .p-inner {
