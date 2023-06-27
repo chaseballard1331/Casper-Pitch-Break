@@ -219,3 +219,41 @@
     /* Position image to far right */
   }
 }
+
+.shape {
+  position: absolute;
+  font-weight: bold;
+  font-size: 4em;
+  color: green;
+  opacity: 0.3;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.shape1 {
+  top: -50px;
+  left: -50px;
+  animation-name: moveShape1;
+}
+
+.shape2 {
+  top: 100px;
+  right: -50px;
+  animation-name: moveShape2;
+}
+
+@keyframes moveShape1 {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(200px, 200px); }
+}
+
+@keyframes moveShape2 {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-200px, 200px); }
+}
+
+.p-outer.hero {
+  position: relative;
+  overflow: hidden;
+}
