@@ -229,7 +229,7 @@ production stylesheet in assets/built/screen.css
 
 @media (max-width: 991px) {
     .site-header-content {
-        padding-top: calc(19vmin + 32px);
+        padding-top: calc(-7vmin + 32px);
     }
 }
 
