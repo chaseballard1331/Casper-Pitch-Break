@@ -230,11 +230,10 @@
   font-weight: bold;
   font-size: 4em;
   color: green;
-  opacity: 0.3;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  filter: blur(4px); /* Adding blur */
-  animation-duration: 20s; /* Making the animation slower */
+  filter: blur(4px);
+  animation-duration: 20s;
 }
 
 .shape1 {
@@ -268,27 +267,27 @@
 }
 
 @keyframes moveShape1 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(120vw, 180vh); }
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(120vw, 180vh); opacity: 0; }
 }
 
 @keyframes moveShape2 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-180vw, 120vh); }
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(-180vw, 120vh); opacity: 0; }
 }
 
 @keyframes moveShape3 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(90vw, -150vh); }
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(90vw, -150vh); opacity: 0; }
 }
 
 @keyframes moveShape4 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-120vw, -90vh); }
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(-120vw, -90vh); opacity: 0; }
 }
 
 @keyframes moveShape5 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(170vw, 70vh); }
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(170vw, 70vh); opacity: 0; }
 }
 
