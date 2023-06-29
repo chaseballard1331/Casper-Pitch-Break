@@ -312,7 +312,6 @@
   height: auto;
   overflow: visible;
   font-size: 1.5em; /* Example font size for desktop */
-  /* Other styles go here */
 }
 
 /* Media query for smaller screens */

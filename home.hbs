@@ -3,30 +3,26 @@
 into the {body} of the default.hbs template --}}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  var typedText = document.querySelector('.typing');
-  var text = typedText.getAttribute('data-text');
-  var words = text.split(" ");
-  var currentWordIndex = 0;
-  var currentCharIndex = 0;
-  
-  function typeWord() {
-    if (currentWordIndex < words.length) {
-      var currentWord = words[currentWordIndex];
-      if (currentCharIndex < currentWord.length) {
-        typedText.textContent += currentWord[currentCharIndex];
-        currentCharIndex++;
-        setTimeout(typeWord, 70);
+ document.addEventListener('DOMContentLoaded', function() {
+  var typedElements = document.querySelectorAll('.typing');
+
+  typedElements.forEach(function(typedElement) {
+    var text = typedElement.getAttribute('data-text');
+    var textArray = text.split("");
+    var loopIndex = 0;
+
+    function loop() {
+      if (textArray.length > 0) {
+        typedElement.innerHTML += textArray.shift();
       } else {
-        typedText.textContent += " "; // Add space between words
-        currentWordIndex++;
-        currentCharIndex = 0;
-        typeWord();
+        return false;
       }
+      loopIndex = loopIndex < textArray.length ? (loopIndex + 1) : 0;
+      setTimeout(loop, 70);
     }
-  }
-  
-  typeWord();
+
+    loop();
+  });
 });
 </script>
 
