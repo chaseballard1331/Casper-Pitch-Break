@@ -6,8 +6,6 @@ into the {body} of the default.hbs template --}}
 
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
-            {{!-- This is a responsive image, it loads different sizes depending on device
-            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
             <img class="site-header-cover"
                 srcset="{{img_url @site.cover_image size="s"}} 300w,
                         {{img_url @site.cover_image size="m"}} 600w,
@@ -42,24 +40,15 @@ into the {body} of the default.hbs template --}}
 
 <section class="p-outer hero">
     <div class="p-inner p-hero">
-        
-        <!-- Floating shapes 
-        <div class="shape shape1">/</div>
-        <div class="shape shape2">/</div>
-        <div class="shape shape3">/</div>
-        <div class="shape shape4">/</div>
-        <div class="shape shape5">/</div> -->
-        
         <div class="p-hero-left">
-            <div class="input-wrapper">
-                <span class="placeholder"></span>
-            </div>
+            <!-- Typed Text Animation -->
+            <div class="typing" data-text="This is a typed text animation"></div>
         </div>
+        
         <div class="p-hero-left">
             <a class="footer-cta-button gh-portal-close" href="#/portal" data-portal="">
-                <div class="footer-cta-input">Enter your email
-                </div>
-            <span>Subscribe</span>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
             </a>
         </div>
     </div>
