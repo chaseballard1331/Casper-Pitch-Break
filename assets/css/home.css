@@ -313,7 +313,6 @@
   display: inline-block;
   overflow: hidden; /* Hide the text initially and reveal it gradually */
   white-space: nowrap; /* Keep text in a single line */
-  animation: typewriter 4s steps(50, end) infinite; /* 4s duration for typewriter, infinite blinking cursor */
-  border-right: .15em solid; /* Cursor effect */
+  animation: typewriter 4s steps(50, end); /* 4s duration for typewriter, infinite blinking cursor */
   width: 0; /* Initial width */
 }
