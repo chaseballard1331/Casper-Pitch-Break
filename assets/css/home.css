@@ -332,7 +332,7 @@
 }
 
 /* Apply the typewriter animation */
-.typing::after {
+.typing::before {
   content: attr(data-text);
   overflow: hidden; /* Hide the text initially and reveal it gradually */
   white-space: nowrap; /* Keep text in a single line by default */
