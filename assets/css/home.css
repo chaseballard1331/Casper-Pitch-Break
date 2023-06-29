@@ -307,39 +307,36 @@
   }
 }
 
-/* Hide the text initially */
-.typing::before {
-  content: attr(data-text);
-  display: inline-block;
-  overflow: hidden; /* Hide the text initially and reveal it gradually */
-  white-space: nowrap; /* Keep text in a single line */
-  animation: typewriter 4s steps(50, end) forwards; /* 4s duration, 50 steps, and keep the final state */
-  padding: 5rem 0px;
-  white-space: normal; /* Allow text to wrap to a new line */
-  line-height: initial;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
-}
-
 /* General styles for the typing effect */
 .typing {
-    height: auto;
-    overflow: visible;
-    font-size: 1.5em; /* Example font size for desktop */
-    /* Other styles go here */
+  height: auto;
+  overflow: visible;
+  font-size: 1.5em; /* Example font size for desktop */
+  /* Other styles go here */
 }
 
-/* Media query for mobile devices */
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    .typing {
-        font-size: 1em; /* Adjust font size for mobile devices */
-    }
+  .typing {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+  .typing::after {
+    white-space: normal; /* Allow text to wrap on smaller screens */
+  }
 }
 
 /* Media query for very small mobile devices */
 @media screen and (max-width: 480px) {
-    .typing {
-        font-size: 0.8em; /* Adjust font size for very small mobile devices */
-    }
+  .typing {
+    font-size: 0.8em; /* Adjust font size for very small mobile devices */
+  }
+}
+
+/* Apply the typewriter animation */
+.typing::after {
+  content: attr(data-text);
+  overflow: hidden; /* Hide the text initially and reveal it gradually */
+  white-space: nowrap; /* Keep text in a single line by default */
+  animation: typewriter 4s steps(50, end) forwards; /* 4s duration, 50 steps, and keep the final state */
 }
 
