@@ -307,28 +307,23 @@
   }
 }
 
-/* Hide the text initially */
-.typing::before {
-  content: attr(data-text);
-  display: inline-block;
-  overflow: hidden; /* Hide the text initially and reveal it gradually */
-  white-space: nowrap; /* Keep text in a single line */
-  animation: typewriter 4s steps(50, end); /* 4s duration, 50 steps */
-  border-right: .15em solid; /* Cursor effect */
-  width: 0; /* Initial width */
-}
-
-/* Optional - Keep the cursor blinking at the end of the animation */
+/* Create a blinking cursor effect */
 @keyframes blink {
   from, to {
-    border-color: transparent
+    border-color: transparent;
   }
   50% {
     border-color: black;
   }
 }
 
+/* Hide the text initially */
 .typing::before {
-  animation-delay: 4s; /* Same as the typewriter animation duration */
-  animation: blink 1s step-end infinite;
+  content: attr(data-text);
+  display: inline-block;
+  overflow: hidden; /* Hide the text initially and reveal it gradually */
+  white-space: nowrap; /* Keep text in a single line */
+  animation: typewriter 4s steps(50, end), blink 1s steps(1) infinite; /* 4s duration for typewriter, infinite blinking cursor */
+  border-right: .15em solid; /* Cursor effect */
+  width: 0; /* Initial width */
 }
