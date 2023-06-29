@@ -314,6 +314,11 @@
   overflow: hidden; /* Hide the text initially and reveal it gradually */
   white-space: nowrap; /* Keep text in a single line */
   animation: typewriter 4s steps(50, end) forwards; /* 4s duration, 50 steps, and keep the final state */
+  padding: 5rem 0px;
+  white-space: normal; /* Allow text to wrap to a new line */
+  line-height: initial;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 /* General styles for the typing effect */
