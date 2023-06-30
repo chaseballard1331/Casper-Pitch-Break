@@ -174,14 +174,14 @@
 }
 
 .css-typing p {
-    border-right: .15em solid orange;
-    font-family: "Courier";
+    border-right: .15em solid var(--ghost-accent-color);
+    font-family: inherit;
     font-size: 3rem;
     white-space: nowrap;
     overflow: hidden;
   }
   .css-typing p:nth-child(1) {
-    width: auto;
+    width: 7.3em;
     -webkit-animation: type 2s steps(40, end);
     animation: type 2s steps(40, end);
     -webkit-animation-fill-mode: forwards;
@@ -215,7 +215,7 @@
       width: 0;
     }
     99.9% {
-      border-right: .15em solid orange;
+      border-right: .15em solid var(--ghost-accent-color);
     }
     100% {
       border: none;
@@ -227,7 +227,7 @@
       width: 0;
     }
     99.9% {
-      border-right: .15em solid orange;
+      border-right: .15em solid var(--ghost-accent-color);
     }
     100% {
       border: none;
@@ -242,7 +242,7 @@
       opacity: 1;
     }
     99.9% {
-      border-right: .15em solid orange;
+      border-right: .15em solid var(--ghost-accent-color);
     }
     100% {
       opacity: 1;
@@ -258,7 +258,7 @@
       opacity: 1;
     }
     99.9% {
-      border-right: .15em solid orange;
+      border-right: .15em solid var(--ghost-accent-color);
     }
     100% {
       opacity: 1;
