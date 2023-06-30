@@ -204,7 +204,7 @@
     max-height: none;
     aspect-ratio: 1 / 1;
     /* Make the image a square */
-    filter: drop-shadow(2px 3px 10px rgb(0 0 0 / 0.25));
+    filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.25));
     /* Add a shadow*/
     object-fit: contain;
     /* But also ensure it's not cropped */
