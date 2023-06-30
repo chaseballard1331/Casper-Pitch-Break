@@ -2,30 +2,6 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<script>
- document.addEventListener('DOMContentLoaded', function() {
-  var typedElements = document.querySelectorAll('.typing');
-
-  typedElements.forEach(function(typedElement) {
-    var text = typedElement.getAttribute('data-text');
-    var textArray = text.split("");
-    var loopIndex = 0;
-
-    function loop() {
-      if (textArray.length > 0) {
-        typedElement.innerHTML += textArray.shift();
-      } else {
-        return false;
-      }
-      loopIndex = loopIndex < textArray.length ? (loopIndex + 1) : 0;
-      setTimeout(loop, 70);
-    }
-
-    loop();
-  });
-});
-</script>
-
 <div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
@@ -66,9 +42,11 @@ into the {body} of the default.hbs template --}}
     <div class="p-inner p-hero">
         <div class="p-hero-left">
             <!-- Typed Text Animation -->
-            <div class="typing" data-text="Level up with insights on pitching and building"></div>
+            <div class="input-wrapper">
+                <input aria-label="Ask us anything">
+                <span class="placeholder"></span>
+            </div>
         </div>
-        
         <div class="p-hero-left">
             <a class="footer-cta-button gh-portal-close" href="#/portal" data-portal="">
                 <div class="footer-cta-input">Enter your email</div>
