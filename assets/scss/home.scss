@@ -176,12 +176,12 @@
 .css-typing p {
     border-right: .15em solid orange;
     font-family: "Courier";
-    font-size: 14px;
+    font-size: 3rem;
     white-space: nowrap;
     overflow: hidden;
   }
   .css-typing p:nth-child(1) {
-    width: 7.3em;
+    width: auto;
     -webkit-animation: type 2s steps(40, end);
     animation: type 2s steps(40, end);
     -webkit-animation-fill-mode: forwards;
