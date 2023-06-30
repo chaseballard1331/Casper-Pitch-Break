@@ -70,7 +70,7 @@
 
 /* Define the size of the sections */
 .p-outer {
-  padding: 5vmin max(4vmin, 20px) 5vmin;
+  padding: 5vmin calc(max(4vmin, 20px)) 5vmin;
 }
 
 .p-inner {
