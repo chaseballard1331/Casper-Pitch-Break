@@ -12,6 +12,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
 const fs = require('fs');
+const sass = require('gulp-sass');
 
 // postcss plugins
 const autoprefixer = require('autoprefixer');
@@ -58,6 +59,15 @@ function css(done) {
     ], handleError(done));
 }
 
+function scss(done) {
+    pump([
+        src('assets/scss/**/*.scss', {sourcemaps: true}),
+        sass().on('error', sass.logError),
+        dest('assets/css', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
 function js(done) {
     pump([
         src([
@@ -92,8 +102,10 @@ function zipper(done) {
 const cssWatcher = () => watch('assets/css/**', css);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher);
-const build = series(css, js);
+const scssWatcher = () => watch('assets/scss/**', scss);
+const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher, scssWatcher);
+
+const build = series(scss, css, js); // modified this line to include scss
 
 exports.build = build;
 exports.zip = series(build, zipper);

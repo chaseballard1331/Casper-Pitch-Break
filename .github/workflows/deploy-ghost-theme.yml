@@ -26,7 +26,7 @@ jobs:
         run: yarn install
 
       - name: Build theme
-        run: gulp build
+        run: gulp build # This calls the 'build' task defined in your updated gulpfile.js
 
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1
