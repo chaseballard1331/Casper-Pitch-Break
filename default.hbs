@@ -26,12 +26,12 @@
             position: relative;
         }
 
-        .gh-toc>.toc-list {
+        .gh-toc > .toc-list {
             position: relative;
         }
 
         .toc-list {
-            overflow: hidden;
+            overflow: hidden; /* Be cautious with this */
             list-style: none;
             font-size: .5em;
         }
@@ -40,6 +40,7 @@
             line-height: 1.5em;
         }
 
+        /* For larger screens */
         @media (min-width: 1300px) {
             .gh-sidebar {
                 position: absolute;
@@ -47,21 +48,19 @@
                 bottom: 0;
                 margin-top: 4vmin;
                 grid-column: wide-start / main-start;
-                /* Place the TOC to the left of the content */
             }
 
             .gh-toc {
                 position: sticky;
-                /* On larger screens, TOC will stay in the same spot on the page */
                 top: 4vmin;
             }
         }
 
+        /* For smaller screens */
         @media (max-width: 1400px) {
             .gh-toc {
                 background: #fff;
-                border-radius: 1em;
-                border-radius: var(--radius);
+                border-radius: 40px; /* Removed duplicate border-radius */
                 box-shadow: 0 10px 50px rgba(25, 37, 52, .14), 0 2px 5px rgba(25, 37, 52, .03);
                 overflow-y: scroll;
                 padding: 30px;
@@ -70,8 +69,7 @@
         }   
 
         .gh-toc .is-active-link::before {
-            background-color: var(--ghost-accent-color);
-            /* Defines TOC   accent color based on Accent color set in Ghost Admin */
+            background-color: var(--ghost-accent-color, blue); /* Added fallback value */
         }
     </style>
 
