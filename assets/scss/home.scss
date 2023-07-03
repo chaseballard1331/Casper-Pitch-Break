@@ -251,18 +251,23 @@
 
 .explore-more-btn{
   font-size: .85rem;
-  padding: 0.5em 1em;
+  padding: 3px 16px;
   text-transform: capitalize;
   display: flex;
+  align-items: center;
+  font-weight: 600;
   :hover{
-    border-radius: 44px;
+    border-radius: 4px;
     background-color: var(--ghost-accent-color);
     color: white;
-    padding: 5px;
   }
 }
 
 .section{
   display: flex;
   flex-wrap: wrap;
+}
+
+.section h2{
+  display: flex;
 }
