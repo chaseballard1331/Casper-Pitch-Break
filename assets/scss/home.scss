@@ -258,10 +258,18 @@
   :hover{
     border-radius: 44px;
     background-color: var(--ghost-accent-color);
-    color: #000;
+    color: white;
   }
 }
 
-.post-feed-title{
-  display: inline-flex;
+.post-feed-header{
+  display: flex;
 }
+
+.post-feed-flex-child{
+  flex: 1;
+  :first-child{
+    margin-right: 20px;
+  }
+}
+
