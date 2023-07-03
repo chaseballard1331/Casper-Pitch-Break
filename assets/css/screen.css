@@ -874,6 +874,12 @@ production stylesheet in assets/built/screen.css
     flex-direction: column;
     background-size: cover;
     word-break: break-word;
+    border: 1px darkgrey solid;
+    padding: 24px;
+    border-radius: var(--global-radius);
+    :hover{
+        box-shadow: 5px 20px 0 rgba(0,0,0,.08);
+    }
 }
 
 .post-card-image-link {
