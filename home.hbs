@@ -64,9 +64,10 @@ into the {body} of the default.hbs template --}}
 <section>
     <div class="inner posts">
         <div class="post-feed-header section">
-            <h2 class="post-feed-title">Recent Pitch Breakdown</h2>
+            <h2 class="post-feed-title">Pitch Breakdowns</h2>
             <a class="explore-more-btn" href="tag/decode">
-            <span>Explore more</span></a>
+                <span>Explore more</span>
+            </a>
         </div>
         <div class="post-feed">
             {{#get "posts" limit="3" include="tags" filter="tags:[pitch-breakdown]" order="published_at desc"}}
