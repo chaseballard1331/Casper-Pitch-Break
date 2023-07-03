@@ -67,6 +67,7 @@ into the {body} of the default.hbs template --}}
             <h2 class="post-feed-title">Pitch Breakdowns</h2>
             <a class="explore-more-btn" href="tag/decode">
                 <span>Explore more</span>
+                <i class='fas fa-long-arrow-alt-right' style='font-size:24px'></i>
             </a>
         </div>
         <div class="post-feed">
@@ -81,8 +82,12 @@ into the {body} of the default.hbs template --}}
 
 <section>
     <div class="inner posts">
-        <div class="post-feed-header">
-        <h2 class="post-feed-title">Recent Articles</h2>
+        <div class="post-feed-header section">
+            <h2 class="post-feed-title">Recent Articles</h2>
+            <a class="explore-more-btn" href="tag/foundry">
+                <span>Explore more</span>
+            </a>
+        </div>
         <div class="post-feed">
             {{#get "posts" limit="3" include="tags" filter="tags:[foundry]" order="published_at desc"}}
                 {{#foreach posts}}
