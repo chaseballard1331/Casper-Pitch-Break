@@ -253,8 +253,7 @@
   font-size: .85rem;
   padding: 0.5em 1em;
   text-transform: capitalize;
-  align-self: center;
-  display: inline-flex;
+  display: flex;
   :hover{
     border-radius: 44px;
     background-color: var(--ghost-accent-color);
@@ -263,18 +262,7 @@
   }
 }
 
-.post-feed-header{
+.section{
   display: flex;
-}
-
-.post-feed-flex-child{
-  flex: 1;
-  :first-child{
-    margin-right: 20px;
-  }
-}
-
-.break{
-  flex-basis: 100%;
-  height: 0;
+  flex-wrap: wrap;
 }
