@@ -254,9 +254,14 @@
   padding: 0.5em 1em;
   text-transform: capitalize;
   align-self: center;
-  :hover>{
+  display: inline-flex;
+  :hover{
     border-radius: 44px;
     background-color: var(--ghost-accent-color);
     color: #000;
   }
+}
+
+.post-feed-title{
+  display: inline-flex;
 }
