@@ -259,6 +259,7 @@
     border-radius: 44px;
     background-color: var(--ghost-accent-color);
     color: white;
+    padding: 5px;
   }
 }
 
@@ -273,3 +274,7 @@
   }
 }
 
+.break{
+  flex-basis: 100%;
+  height: 0;
+}

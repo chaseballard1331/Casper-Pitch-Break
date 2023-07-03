@@ -64,10 +64,11 @@ into the {body} of the default.hbs template --}}
 <section>
     <div class="inner posts">
         <div class="post-feed-header">
-        <h2 class="post-feed-title post-feed-flex-child">Recent Pitch Breakdown</h2>
-        <a class="explore-more-btn post-feed-flex-child" href="tag/decode">
-            <span>Explore more</span>
-        </a>
+            <h2 class="post-feed-title post-feed-flex-child">Recent Pitch Breakdown</h2>
+            <div class="break"></div>
+            <a class="explore-more-btn post-feed-flex-child" href="tag/decode">
+            <span>Explore more</span></a>
+        </div>
         <div class="post-feed">
             {{#get "posts" limit="3" include="tags" filter="tags:[pitch-breakdown]" order="published_at desc"}}
                 {{#foreach posts}}
@@ -75,7 +76,6 @@ into the {body} of the default.hbs template --}}
                 {{/foreach}}
             {{/get}}
         {{pagination}}
-
         </div>
 </section>
 
