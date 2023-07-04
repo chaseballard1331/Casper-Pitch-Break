@@ -22,13 +22,7 @@ into the {body} tag of the default.hbs template --}}
                 <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
             {{/if}}
         </div>
-
-        <h1 class="article-title">{{title}}</h1>
-
-        {{#if custom_excerpt}}
-            <p class="article-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
+        
         {{#match @custom.post_image_style "!=" "Hidden"}}
         {{#if feature_image}}
             <figure class="article-image">
@@ -49,6 +43,12 @@ into the {body} tag of the default.hbs template --}}
             </figure>
         {{/if}}
         {{/match}}
+
+        <h1 class="article-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="article-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
 
     </header>
 
