@@ -877,7 +877,7 @@ production stylesheet in assets/built/screen.css
 }
 
 article.post-card{
-    border: 1px darkgrey solid;
+    border: 1px #ebeef0 solid;
     padding: 24px;
     border-radius: var(--global-radius);
 }
