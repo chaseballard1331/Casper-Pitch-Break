@@ -886,6 +886,15 @@ article.post-card:hover{
     box-shadow: 0 5px 20px 0 rgba(0,0,0,.08);
 }
 
+.post-card-header{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 .post-card-image-link {
     position: relative;
     overflow: hidden;
