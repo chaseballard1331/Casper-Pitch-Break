@@ -40,6 +40,9 @@ which templates loop over to generate a list of posts. --}}
         <a class="post-card-content-link" href="{{url}}">
             <header class="post-card-header">
                 <div class="post-card-tags">
+                    {{#primary_tag}}
+                        <a class="post-card-primary-tag">{{name}}</a>
+                    {{/primary_tag}}
                     {{#if featured}}
                         <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
                     {{/if}}
@@ -68,9 +71,6 @@ which templates loop over to generate a list of posts. --}}
             {{#if @site.comments_enabled}}
                 {{comment_count}}
             {{/if}}
-            {{#primary_tag}}
-                <span class="post-card-primary-tag">{{name}}</span>
-            {{/primary_tag}}
         </footer>
 
     </div>
