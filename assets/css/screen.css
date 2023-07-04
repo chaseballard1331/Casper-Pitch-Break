@@ -886,7 +886,7 @@ article.post-card:hover{
     box-shadow: 0 5px 20px 0 rgba(0,0,0,.08);
 }
 
-.post-card-header{
+.post-card-title{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
