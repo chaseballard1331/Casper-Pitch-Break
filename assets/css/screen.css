@@ -2530,6 +2530,7 @@ the right place. Onward!
 
  .tools-header{
     display: flex;
+    margin-bottom: 2em;
  }
 
  .tools-header figure{
@@ -2540,4 +2541,8 @@ the right place. Onward!
  .tools-header .article-title{
     margin: auto 1em;
     flex: 1;
+ }
+
+ .gh-canvas .article-image {
+    margin: unset;
  }
