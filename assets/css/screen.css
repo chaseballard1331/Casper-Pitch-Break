@@ -2556,6 +2556,6 @@ the right place. Onward!
     }
  }
 
- article .post-card .post .tag-copilot img {
-
- }
+ .article .tag-copilot .post-card-meta footer{
+    display: none;
+}
