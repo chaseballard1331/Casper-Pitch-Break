@@ -85,6 +85,17 @@
 
     </style>
 
+    {{!-- Hide sidebar if no TOC content --}}
+    <script>
+        window.onload = function () {
+            var toc = document.querySelector('.gh-toc');
+            if (!toc.hasChildNodes()) {
+                var heading = document.querySelector('.gh-sidebar');
+                heading.style.display = 'none';
+            }
+        }
+    </script>
+
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
