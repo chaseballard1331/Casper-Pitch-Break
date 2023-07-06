@@ -35,6 +35,7 @@
             overflow: hidden;
             list-style: none;
             font-size: 1.5rem;
+            margin-top: 10px;
         }
 
         .toc-list li {
@@ -64,7 +65,7 @@
 
             .toc-list-heading {
                 top: 2vmin;
-                position: inherit;
+                position: sticky;
                 margin-bottom: unset;
             }
         }
@@ -85,6 +86,18 @@
     </style>
 
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    {{!-- Get the tags for each post and if the tag is 'copilot' change the image class --}}
+    <script type="text/javascript">
+            // Get the tags for the current post.
+            var tags = _.get(post, 'tags');
+
+            // Check if the post has the "copilot" tag.
+            if (tags && tags.includes('copilot')) {
+                // Change the class of the image to "post-card-image-copilot".
+                $(".post-card-image").addClass("post-card-image-copilot");
+            }
+    </script>
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
