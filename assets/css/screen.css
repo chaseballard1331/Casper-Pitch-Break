@@ -2524,23 +2524,26 @@ the right place. Onward!
 
  */
 
- .gh-canvas .article-image .tools-header img {
-    max-width: 10em;
- }
-
  .tools-header{
     display: flex;
     margin-bottom: 2em;
+    gap: 2em;
  }
 
  .tools-header figure{
     display: flex;
     flex: 1;
+    max-width: 10em;
  }
 
  .tools-header .article-title{
     margin: auto 1em;
     flex: 1;
+    font-size: 1em;
+ }
+
+ .tools-header .article-excerpt{
+    font-weight: normal;
  }
 
  .gh-canvas .article-image {
@@ -2549,6 +2552,6 @@ the right place. Onward!
 
  @media (max-width: 767px) {
     .tools-header .article-excerpt {
-        font-size: 1.3rem;
+        font-size: .5em;
     }
  }
