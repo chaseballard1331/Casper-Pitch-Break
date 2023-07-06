@@ -2544,5 +2544,11 @@ the right place. Onward!
  }
 
  .gh-canvas .article-image {
-    margin: unset;
+    margin: auto;
+ }
+
+ @media (max-width: 767px) {
+    .tools-header .article-excerpt {
+        font-size: 1.3rem;
+    }
  }
