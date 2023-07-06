@@ -43,11 +43,12 @@ into the {body} tag of the default.hbs template --}}
 
         <h1 class="article-title">{{title}}</h1>
 
+        </div>
+
         {{#if custom_excerpt}}
             <p class="article-excerpt">{{custom_excerpt}}</p>
         {{/if}}
 
-        </div>
     </header>
 
     <section class="gh-content gh-canvas">
@@ -71,7 +72,7 @@ into the {body} tag of the default.hbs template --}}
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
-    {{#get "posts" filter="id:-{{id}}" limit="3" include="tags" filter="tags:[copilot] as |more_posts|}}
+    {{#get "posts" filter="id:-{{id}}" limit="3" include="tags" filter="tags:[copilot]" as |more_posts|}}
 
         {{#if more_posts}}
             <aside class="read-more-wrap outer">
