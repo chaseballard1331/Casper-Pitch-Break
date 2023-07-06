@@ -2523,7 +2523,21 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
- 
+
  .gh-canvas .article-image .tools-header img {
+    max-width: 10em;
+ }
+
+ .tools-header{
     display: flex;
+ }
+
+ .tools-header figure{
+    display: flex;
+    flex: 1;
+ }
+
+ .tools-header .article-title{
+    margin: auto 1em;
+    flex: 1;
  }
