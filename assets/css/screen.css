@@ -416,6 +416,10 @@ production stylesheet in assets/built/screen.css
     white-space: nowrap;
 }
 
+.h1-head-logo {
+    margin: unset;
+}
+
 .gh-head-logo.no-image {
     margin-top: -5px;
 }
@@ -699,6 +703,15 @@ production stylesheet in assets/built/screen.css
 .gh-head-open .gh-burger::after {
     bottom: 14px;
     transform: rotate(-45deg);
+}
+
+#gh-head {
+    transition: all .4s ease-out;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 
@@ -1717,7 +1730,7 @@ iframe.instagram-media + script + :not([id]) {
 .article-byline {
     display: flex;
     justify-content: space-between;
-    margin: min(24px, 5.6vmin) 0 0;
+    margin: min(24px, 5.6vmin) 0 4rem;
 }
 
 .article-byline-content {
