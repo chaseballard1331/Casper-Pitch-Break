@@ -63,12 +63,10 @@ which templates loop over to generate a list of posts. --}}
             {{/if}}
         </a>
     
-        {{#unless access}}
-    {{#has visibility="public"}}
-        {{#foreach tags}}
-            {{#unless tag="copilot"}}
+        {{#get "tags" filter="slug:[copilot]" as |copilotTag|}}
+            {{#unless copilotTag}}
                 <footer class="post-card-meta">
-                    <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                    <time class="post-card-meta-date" datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>
                     {{#if reading_time}}
                         <span class="post-card-meta-length">{{reading_time}}</span>
                     {{/if}}
@@ -77,9 +75,7 @@ which templates loop over to generate a list of posts. --}}
                     {{/if}}
                 </footer>
             {{/unless}}
-        {{/foreach}}
-    {{/has}}
-{{/unless}}   
+        {{/get}}  
     </div>
 
 
