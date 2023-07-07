@@ -705,16 +705,6 @@ production stylesheet in assets/built/screen.css
     transform: rotate(-45deg);
 }
 
-#gh-head {
-    transition: all .4s ease-out;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-
 /* Mobile Menu
 /* ---------------------------------------------------------- */
 /* IDs needed to ensure sufficient specificity */
