@@ -99,4 +99,24 @@ into the {body} of the default.hbs template --}}
         </div>
 </section>
 
+<section>
+    <div class="inner posts">
+        <div class="post-feed-header section">
+            <h2 class="post-feed-title">Tools</h2>
+            <a class="explore-more-btn" href="tag/foundry">
+                <span>Explore all tools</span>
+            </a>
+        </div>
+        <div class="post-feed">
+            {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            {{/get}}
+        
+        {{pagination}}
+
+        </div>
+</section>
+
 </main>
