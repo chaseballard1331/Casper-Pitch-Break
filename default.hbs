@@ -97,6 +97,40 @@
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Get the section element
+            const section = document.querySelector('#copilot-section');
+
+            // Get all the post elements within the section
+            const posts = Array.from(section.querySelectorAll('.post'));
+
+            // Get all the tag buttons
+            const buttons = Array.from(document.querySelectorAll('.tag-button'));
+
+            // Add a click event listener to each button
+            buttons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    // Get the tag from the data-tag attribute
+                    const tag = event.currentTarget.getAttribute('data-tag');
+
+                    // Loop over the posts
+                    posts.forEach(post => {
+                        // Get the tag elements for this post
+                        const tags = Array.from(post.querySelectorAll('.tag'));
+
+                        // Check if any of the tags match the button tag
+                        const hasTag = tags.some(tagElement => tagElement.textContent.includes(tag));
+
+                        // If the post doesn't have the tag, hide it. Otherwise, show it.
+                        post.style.display = hasTag ? 'block' : 'none';
+                    });
+                });
+            });
+        });
+    </script>
+
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
