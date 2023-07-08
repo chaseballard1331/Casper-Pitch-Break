@@ -2559,7 +2559,7 @@ the right place. Onward!
     }
  }
 
-article .tag-copilot .post-card-image {
+ article.post-card.tag-copilot .post-card-image {
     width: 14rem;
     border-radius: var(--global-radius);
 }
