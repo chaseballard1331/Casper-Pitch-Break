@@ -100,11 +100,8 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Get the section element
-            const section = document.querySelector('#copilot-section');
-
-            // Get all the post elements within the section
-            const posts = Array.from(section.querySelectorAll('.post'));
+            // Get all the post-card elements
+            const posts = Array.from(document.querySelectorAll('.post-card'));
 
             // Get all the tag buttons
             const buttons = Array.from(document.querySelectorAll('.tag-button'));
@@ -113,15 +110,15 @@
             buttons.forEach(button => {
                 button.addEventListener('click', (event) => {
                     // Get the tag from the data-tag attribute
-                    const tag = event.currentTarget.getAttribute('data-tag');
+                    const tag = event.currentTarget.getAttribute('data-tag').toLowerCase();
 
                     // Loop over the posts
                     posts.forEach(post => {
                         // Get the tag elements for this post
-                        const tags = Array.from(post.querySelectorAll('.tag'));
+                        const tags = Array.from(post.querySelectorAll('.post-card-tags a'));
 
                         // Check if any of the tags match the button tag
-                        const hasTag = tags.some(tagElement => tagElement.textContent.includes(tag));
+                        const hasTag = tags.some(tagElement => tagElement.textContent.trim().toLowerCase() === tag);
 
                         // If the post doesn't have the tag, hide it. Otherwise, show it.
                         post.style.display = hasTag ? 'block' : 'none';
@@ -130,6 +127,7 @@
             });
         });
     </script>
+
 
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
