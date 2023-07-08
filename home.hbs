@@ -99,7 +99,7 @@ into the {body} of the default.hbs template --}}
         </div>
 </section>
 
-<section>
+<section class="tools-section">
     <div class="inner posts">
         <div class="post-feed-header section">
             <h2 class="post-feed-title">Tools</h2>
@@ -107,16 +107,20 @@ into the {body} of the default.hbs template --}}
                 <span>Explore all tools</span>
             </a>
         </div>
-        <div class="post-feed">
-            {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
-                {{#foreach posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/get}}
-        
-        {{pagination}}
-
+        <div class="tools-content">
+            <aside class="tools-sidebar">
+                <!-- Your sidebar content goes here -->
+            </aside>
+            <div class="post-feed tools-posts">
+                {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
+                    {{#foreach posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                {{/get}}
+                {{pagination}}
+            </div>
         </div>
+    </div>
 </section>
 
 </main>

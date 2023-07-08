@@ -278,3 +278,17 @@
 .fa-long-arrow-alt-right:before{
   content: "\f30b";
 }
+
+.tools-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tools-sidebar {
+  flex: 1;
+}
+
+.tools-posts {
+  flex: 2;
+}
