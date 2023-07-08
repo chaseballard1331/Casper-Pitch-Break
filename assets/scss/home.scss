@@ -300,6 +300,10 @@
 .sidebar-nav {
   list-style-type: none; /* Removes bullet points */
   padding: 0; /* Removes default padding */
+  position: sticky;
+  top: 4vmin;
+  margin-top: 4rem;
+  padding-right: 2rem;
 }
 
 .sidebar-button {
@@ -308,11 +312,17 @@
   text-align: left; /* Aligns text to the left */
   padding: 10px; /* Adds some padding */
   margin-bottom: 10px; /* Adds some space between buttons */
-  background-color: #f0f0f0; /* Example background color */
-  border: none; /* Removes default button border */
+  background-color: #fff; /* Example background color */
+  border: 1px solid #ebeef0;
   cursor: pointer; /* Changes cursor to hand on hover */
 }
 
 .sidebar-button:hover {
   background-color: #e0e0e0; /* Changes background color on hover */
+}
+
+.fa-arrow-right-long:before, .fa-long-arrow-right:before {
+  content: "\f178";
+  font-family: 'FontAwesome';
+  margin-left: 1rem;
 }

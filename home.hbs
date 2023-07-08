@@ -67,6 +67,7 @@ into the {body} of the default.hbs template --}}
             <h2 class="post-feed-title">Pitch Breakdowns</h2>
             <a class="explore-more-btn" href="tag/decode">
                 <span>Explore more</span>
+                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
         <div class="post-feed">
@@ -85,6 +86,7 @@ into the {body} of the default.hbs template --}}
             <h2 class="post-feed-title">Recent Articles</h2>
             <a class="explore-more-btn" href="tag/foundry">
                 <span>Explore more</span>
+                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
         <div class="post-feed">
@@ -127,6 +129,7 @@ into the {body} of the default.hbs template --}}
             <h2 class="post-feed-title">Tools</h2>
             <a class="explore-more-btn" href="tag/foundry">
                 <span>Explore all tools</span>
+                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
         <div class="tools-content">
@@ -139,9 +142,9 @@ into the {body} of the default.hbs template --}}
             </aside>
             <div class="post-feed tools-posts">
                 {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
-                {{#foreach posts}}
-                {{> "post-card"}}
-                {{/foreach}}
+                    {{#foreach posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
                 {{/get}}
                 {{pagination}}
             </div>
