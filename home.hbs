@@ -131,13 +131,17 @@ into the {body} of the default.hbs template --}}
         </div>
         <div class="tools-content">
             <aside class="tools-sidebar">
-                <!-- Your sidebar content goes here -->
+                <ul class="sidebar-nav">
+                    <li><button class="sidebar-button">Tag 1</button></li>
+                    <li><button class="sidebar-button">Tag 2</button></li>
+                    <li><button class="sidebar-button">Tag 3</button></li>
+                </ul>
             </aside>
             <div class="post-feed tools-posts">
                 {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
-                    {{#foreach posts}}
-                        {{> "post-card"}}
-                    {{/foreach}}
+                {{#foreach posts}}
+                {{> "post-card"}}
+                {{/foreach}}
                 {{/get}}
                 {{pagination}}
             </div>
