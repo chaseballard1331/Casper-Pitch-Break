@@ -257,12 +257,15 @@
   align-items: center;
   font-weight: 600;
   margin-left: 3em;
-  text-decoration: underline;
-  text-decoration-color: var(--ghost-accent-color);
-  :hover{
-    color: var(--ghost-accent-color);
-  }
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0em 1em;
+  border-radius: var(--global-radius);
 }
+
+.explore-more-btn:hover {
+  background-color: lightgray;
+ }
 
 .section{
   display: flex;
