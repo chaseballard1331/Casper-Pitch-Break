@@ -2563,3 +2563,11 @@ the right place. Onward!
     width: 14rem;
     border-radius: var(--global-radius);
 }
+
+article.post-card.post.tag-copilot {
+    grid-column: unset;
+}
+
+.post-feed.tools-posts {
+    grid-template-columns: repeat(2,1fr);
+}
