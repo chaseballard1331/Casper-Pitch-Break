@@ -100,8 +100,11 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Get all the post-card elements
-            const posts = Array.from(document.querySelectorAll('.post-card'));
+            // Get the copilot section
+            const section = document.querySelector('#copilot-section');
+
+            // Get all the article elements with the class "tag-copilot" within the section
+            const posts = Array.from(section.querySelectorAll('article.tag-copilot'));
 
             // Get all the tag buttons
             const buttons = Array.from(document.querySelectorAll('.tag-button'));
@@ -109,16 +112,13 @@
             // Add a click event listener to each button
             buttons.forEach(button => {
                 button.addEventListener('click', (event) => {
-                    // Get the tag from the data-tag attribute
-                    const tag = event.currentTarget.getAttribute('data-tag').toLowerCase();
+                    // Get the tag from the data-tag attribute and prepend 'tag-' to match the class
+                    const tagClass = 'tag-' + event.currentTarget.getAttribute('data-tag').toLowerCase();
 
                     // Loop over the posts
                     posts.forEach(post => {
-                        // Get the tag elements for this post
-                        const tags = Array.from(post.querySelectorAll('.post-card-tags a'));
-
-                        // Check if any of the tags match the button tag
-                        const hasTag = tags.some(tagElement => tagElement.textContent.trim().toLowerCase() === tag);
+                        // Check if the post has the class corresponding to the button tag
+                        const hasTag = post.classList.contains(tagClass);
 
                         // If the post doesn't have the tag, hide it. Otherwise, show it.
                         post.style.display = hasTag ? 'block' : 'none';
@@ -127,8 +127,6 @@
             });
         });
     </script>
-
-
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
