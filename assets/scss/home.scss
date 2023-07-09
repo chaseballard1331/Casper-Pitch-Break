@@ -347,7 +347,7 @@
 }
 
 .sidebar-button:active {
-  background-color: transparent;
+  background-color: var(--ghost-accent-transparent);
   border: 1px solid var(--ghost-accent-color);
   border-radius: var(--global-radius);
 }

@@ -45,6 +45,7 @@ production stylesheet in assets/built/screen.css
 
     /* Other Variables */
     --global-radius: 4px;
+    --ghost-accent-transparent: #27a30012;
 
     /*
     An accent color is also set by Ghost itself in
