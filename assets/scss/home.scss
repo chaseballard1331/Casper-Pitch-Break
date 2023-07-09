@@ -299,6 +299,7 @@
 
 .tools-sidebar {
   font-size: inherit;
+  padding: max(4.8vmin,36px) 0 0;
 }
 
 .sidebar-nav {
@@ -306,7 +307,6 @@
   padding: 0; /* Removes default padding */
   position: sticky;
   top: 4vmin;
-  margin-top: 4rem;
   padding-right: 2rem;
 }
 
@@ -323,6 +323,10 @@
 
 .sidebar-button:hover {
   background-color: #e0e0e0; /* Changes background color on hover */
+}
+
+.sidebar-button:active {
+  background-color: #e0e0e0; /* Changes background color on active */
 }
 
 .fa-arrow-right-long:before, .fa-long-arrow-right:before {
