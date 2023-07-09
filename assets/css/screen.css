@@ -2576,3 +2576,7 @@ article.post-card.post.tag-copilot {
     grid-template-columns: repeat(2,1fr);
     margin-left: 1em;
 }
+
+article.post-card.post.tag-copilot {
+    flex-direction: column !important;
+}

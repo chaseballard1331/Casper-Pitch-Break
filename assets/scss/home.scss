@@ -300,9 +300,6 @@
 .tools-sidebar {
   font-size: inherit;
   padding: 36px 0 0;
-    @media (min-width: calc(36 / 4.8 * 100vmin)) {
-      padding: 4.8vmin 0 0;
-  }
 }
 
 .sidebar-nav {
@@ -319,8 +316,7 @@
   text-align: left; /* Aligns text to the left */
   padding: 10px; /* Adds some padding */
   margin-bottom: 10px; /* Adds some space between buttons */
-  background-color: #fff; /* Example background color */
-  border: 1px solid #ebeef0;
+  background-color: transparent;
   cursor: pointer; /* Changes cursor to hand on hover */
 }
 
@@ -329,7 +325,9 @@
 }
 
 .sidebar-button:active {
-  background-color: #e0e0e0; /* Changes background color on active */
+  background-color: transparent;
+  border: 1px solid var(--ghost-accent-color);
+  border-radius: var(--global-radius);
 }
 
 .fa-arrow-right-long:before, .fa-long-arrow-right:before {
