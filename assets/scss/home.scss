@@ -291,15 +291,32 @@
 
 .tools-sidebar {
   flex: 1;
+  font-size: inherit;
+  padding: 36px 0 0;
 }
+
+@media (max-width: 767px) {
+  .tools-sidebar {
+    display: none;
+  }
+  .post-feed.tools-posts {
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
+    margin-left: unset;
+  }
+}
+
+@media (max-width: 991px) {
+  .post-feed.tools-posts {
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 .tools-posts {
   flex: 2;
-}
-
-.tools-sidebar {
-  font-size: inherit;
-  padding: 36px 0 0;
 }
 
 .sidebar-nav {
@@ -318,6 +335,8 @@
   margin-bottom: 10px; /* Adds some space between buttons */
   background-color: transparent;
   cursor: pointer; /* Changes cursor to hand on hover */
+  border: 1px solid transparent;
+  border-radius: var(--global-radius)
 }
 
 .sidebar-button:hover {
@@ -341,3 +360,4 @@
   border: 1px solid var(--ghost-accent-color);
   border-radius: var(--global-radius);
 }
+

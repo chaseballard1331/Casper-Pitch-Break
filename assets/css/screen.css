@@ -272,6 +272,12 @@ production stylesheet in assets/built/screen.css
     z-index: 150;
 }
 
+@media (max-width: 991px) {
+    #gh-head {
+        top: 2vmin;
+    }
+}
+
 .has-cover:not(.home-template) .gh-head {
     background-color: var(--ghost-accent-color);
     color: #fff;
