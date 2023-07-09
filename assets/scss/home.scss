@@ -335,3 +335,9 @@
   font-family: 'FontAwesome';
   margin-left: 1rem;
 }
+
+.tag-button.active {
+  background-color: transparent;
+  border: 1px solid var(--ghost-accent-color);
+  border-radius: var(--global-radius);
+}

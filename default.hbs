@@ -99,6 +99,12 @@
             // Add a click event listener to each button
             buttons.forEach(button => {
                 button.addEventListener('click', (event) => {
+                    // Remove the 'active' class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add the 'active' class to the clicked button
+                    button.classList.add('active');
+
                     // Get the tag from the data-tag attribute and prepend 'tag-' to match the class
                     const tag = event.currentTarget.getAttribute('data-tag').toLowerCase();
 
