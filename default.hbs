@@ -87,48 +87,59 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Get the copilot section
-            const section = document.querySelector('#copilot-section');
+                // Get the copilot section
+                const section = document.querySelector('#copilot-section');
 
-            // Get all the article elements with the class "tag-copilot" within the section
-            const posts = Array.from(section.querySelectorAll('article.tag-copilot'));
+                // Get all the article elements with the class "tag-copilot" within the section
+                const posts = Array.from(section.querySelectorAll('article.tag-copilot'));
 
-            // Get all the tag buttons
-            const buttons = Array.from(document.querySelectorAll('.tag-button'));
+                // Get all the tag buttons
+                const buttons = Array.from(document.querySelectorAll('.tag-button'));
 
-            // Add a click event listener to each button
-            buttons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    // Remove the 'active' class from all buttons
-                    buttons.forEach(btn => btn.classList.remove('active'));
+                // Get the "All Tools" button
+                const allToolsButton = document.querySelector('.all-tools-button');
 
-                    // Add the 'active' class to the clicked button
-                    button.classList.add('active');
+                // If the "All Tools" button is active, show all posts
+                if (allToolsButton.classList.contains('active')) {
+                    posts.forEach(post => {
+                        post.style.display = 'block';
+                    });
+                }
 
-                    // Get the tag from the data-tag attribute and prepend 'tag-' to match the class
-                    const tag = event.currentTarget.getAttribute('data-tag').toLowerCase();
+                // Add a click event listener to each button
+                buttons.forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        // Remove the 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
 
-                    // Check if the tag is 'all'
-                    if (tag === 'all') {
-                        // If it is, show all posts
-                        posts.forEach(post => {
-                            post.style.display = 'block';
-                        });
-                    } else {
-                        const tagClass = 'tag-' + tag;
+                        // Add the 'active' class to the clicked button
+                        button.classList.add('active');
 
-                        // Loop over the posts
-                        posts.forEach(post => {
-                            // Check if the post has the class corresponding to the button tag
-                            const hasTag = post.classList.contains(tagClass);
+                        // Get the tag from the data-tag attribute and prepend 'tag-' to match the class
+                        const tag = event.currentTarget.getAttribute('data-tag').toLowerCase();
 
-                            // If the post doesn't have the tag, hide it. Otherwise, show it.
-                            post.style.display = hasTag ? 'block' : 'none';
-                        });
-                    }
+                        // Check if the tag is 'all'
+                        if (tag === 'all') {
+                            // If it is, show all posts
+                            posts.forEach(post => {
+                                post.style.display = 'block';
+                            });
+                        } else {
+                            const tagClass = 'tag-' + tag;
+
+                            // Loop over the posts
+                            posts.forEach(post => {
+                                // Check if the post has the class corresponding to the button tag
+                                const hasTag = post.classList.contains(tagClass);
+
+                                // If the post doesn't have the tag, hide it. Otherwise, show it.
+                                post.style.display = hasTag ? 'block' : 'none';
+                            });
+                        }
+                    });
                 });
             });
-        });
+
     </script>
 
 
