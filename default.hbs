@@ -122,8 +122,8 @@
                     // Get the tag from the data-tag attribute and prepend 'tag-' to match the class
                     const tag = event.currentTarget.getAttribute('data-tag').toLowerCase();
 
-                    // Check if the tag is 'all'
-                    if (tag === 'all') {
+                    // Check if the tag is 'copilot'
+                    if (tag === 'copilot') {
                         // If it is, show all posts
                         posts.forEach(post => {
                             post.style.display = 'block';
