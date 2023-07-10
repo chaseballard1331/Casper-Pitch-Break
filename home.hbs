@@ -135,16 +135,13 @@ into the {body} of the default.hbs template --}}
         <div class="tools-content">
             <aside class="tools-sidebar">
                 <ul class="sidebar-nav">
-                    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="all">All Tools</button></li>
-                    {{#get "tags" limit="all"}}
-                        {{#foreach tags}}
-                            {{#if slug startsWith="tools-"}}
-                                <li>
-                                    <button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button>
-                                </li>
-                            {{/if}}
-                        {{/endforeach}}
-                    {{/get}}
+                    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="copilot">All Tools</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-customer-engagement">Customer Engagement</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-collaboration-productivity">Collaboration & Productivity</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-finance">Finance</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-sales-crm">Sales & CRM</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-hr-payroll">HR & Payroll</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-security-compliance">Security & Compliance</button></li>
                 </ul>
             </aside>
             <div class="post-feed tools-posts">
@@ -158,5 +155,23 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </section>
+
+{{!-- If can build a custom helper
+<div class="tools-content">
+            <aside class="tools-sidebar">
+                <ul class="sidebar-nav">
+                    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="all">All Tools</button></li>
+                    {{#get "tags" limit="all"}}
+                        {{#foreach tags}}
+                            {{#if slug startsWith="tools-"}}
+                                <li>
+                                    <button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button>
+                                </li>
+                            {{/if}}
+                        {{/endforeach}}
+                    {{/get}}
+                </ul>
+            </aside>
+--}}
 
 </main>
