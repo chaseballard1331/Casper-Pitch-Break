@@ -145,7 +145,7 @@ into the {body} of the default.hbs template --}}
                 </ul>
             </aside>
             <div class="post-feed tools-posts">
-                {{#get "posts" limit="12" include="tags" filter="tags:[copilot]" order="published_at desc"}}
+                {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
                     {{#foreach posts}}
                         {{> "post-card"}}
                     {{/foreach}}
