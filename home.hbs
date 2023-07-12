@@ -64,14 +64,14 @@ into the {body} of the default.hbs template --}}
 <section>
     <div class="inner posts">
         <div class="post-feed-header section">
-            <h2 class="post-feed-title">Pitch Breakdowns</h2>
-            <a class="explore-more-btn" href="tag/decode">
+            <h2 class="post-feed-title">{{@custom.featured_one_section_heading}}</h2>
+            <a class="explore-more-btn" href="tag/{{@custom.featured_one_tag}}">
                 <span>Explore more</span>
                 <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:[pitch-breakdown]" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags:{{@custom.featured_one_tag}}" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
@@ -85,7 +85,7 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed-header section">
             <h2 class="post-feed-title">Tools</h2>
             <a class="explore-more-btn" href="tag/{{@custom.resources_tag}}">
-                <span>Explore all tools</span>
+                <span>Explore all</span>
                 <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
@@ -116,14 +116,14 @@ into the {body} of the default.hbs template --}}
 <section>
     <div class="inner posts">
         <div class="post-feed-header section">
-            <h2 class="post-feed-title">Recent Articles</h2>
-            <a class="explore-more-btn" href="tag/foundry">
+            <h2 class="post-feed-title">{{@custom.featured_two_section_heading}}</h2>
+            <a class="explore-more-btn" href="tag/{{@custom.featured_two_tag}}">
                 <span>Explore more</span>
                 <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:[foundry]" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags:{{@custom.featured_one_tag}}" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}

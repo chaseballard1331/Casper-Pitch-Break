@@ -183,6 +183,26 @@
                 "type": "text",
                 "default": "h1, h2",
                 "group": "post"
+            },
+            "featured_one_section_heading": {
+                "type": "text",
+                "default": "Featured Articles",
+                "group": "homepage"
+            },
+            "featured_one_section_tag": {
+                "type": "text",
+                "default": "featured:true",
+                "group": "homepage"
+            },
+            "featured_two_section_heading": {
+                "type": "text",
+                "default": "Recent Articles",
+                "group": "homepage"
+            },
+            "featured_two_section_tag": {
+                "type": "text",
+                "default": "Recent Articles",
+                "group": "homepage"
             }
         }
     },
