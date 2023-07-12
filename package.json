@@ -177,12 +177,12 @@
             },
             "enable_table_of_contents": {
                 "type": "boolean",
-                "default": false,
+                "default": true,
                 "group": "post"
             },
             "table_of_content_heading_levels": {
                 "type": "text",
-                "default": "copilot",
+                "default": "h1, h2",
                 "group": "post"
             }
         }
