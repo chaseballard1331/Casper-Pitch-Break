@@ -100,28 +100,6 @@ into the {body} of the default.hbs template --}}
 
         </div>
 </section>
-
-{{!-- Old Section
-<section>
-    <div class="inner posts">
-        <div class="post-feed-header section">
-            <h2 class="post-feed-title">Tools</h2>
-            <a class="explore-more-btn" href="tag/foundry">
-                <span>Explore all tools</span>
-            </a>
-        </div>
-        <div class="post-feed">
-            {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
-                {{#foreach posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/get}}
-        
-        {{pagination}}
-
-        </div>
-</section>
---}}
  
 <section class="tools-section" id="copilot-section">
     <div class="inner posts">
@@ -155,23 +133,5 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </section>
-
-{{!-- If can build a custom helper
-<div class="tools-content">
-            <aside class="tools-sidebar">
-                <ul class="sidebar-nav">
-                    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="all">All Tools</button></li>
-                    {{#get "tags" limit="all"}}
-                        {{#foreach tags}}
-                            {{#if slug startsWith="tools-"}}
-                                <li>
-                                    <button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button>
-                                </li>
-                            {{/if}}
-                        {{/endforeach}}
-                    {{/get}}
-                </ul>
-            </aside>
---}}
 
 </main>
