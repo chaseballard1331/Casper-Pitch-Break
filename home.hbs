@@ -79,6 +79,39 @@ into the {body} of the default.hbs template --}}
         {{pagination}}
         </div>
 </section>
+ 
+<section class="tools-section" id="resources-section">
+    <div class="inner posts">
+        <div class="post-feed-header section">
+            <h2 class="post-feed-title">Tools</h2>
+            <a class="explore-more-btn" href="tag/{{@custom.resources_tag}}">
+                <span>Explore all tools</span>
+                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
+            </a>
+        </div>
+        <div class="tools-content">
+            <aside class="tools-sidebar">
+                <ul class="sidebar-nav">
+                    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="{{@custom.resources_tag}}">All Tools</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-customer-engagement">Customer Engagement</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-collaboration-productivity">Collaboration & Productivity</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-finance">Finance</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-sales-crm">Sales & CRM</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-hr-payroll">HR & Payroll</button></li>
+                    <li><button class="sidebar-button tag-button" data-tag="tools-security-compliance">Security & Compliance</button></li>
+                </ul>
+            </aside>
+            <div class="post-feed tools-posts">
+                {{#get "posts" include="tags" filter="tags:{{@custom.resources_tag}}" order="published_at desc"}}
+                    {{#foreach posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                {{/get}}
+                {{pagination}}
+            </div>
+        </div>
+    </div>
+</section>
 
 <section>
     <div class="inner posts">
@@ -99,39 +132,6 @@ into the {body} of the default.hbs template --}}
         {{pagination}}
 
         </div>
-</section>
- 
-<section class="tools-section" id="copilot-section">
-    <div class="inner posts">
-        <div class="post-feed-header section">
-            <h2 class="post-feed-title">Tools</h2>
-            <a class="explore-more-btn" href="tag/copilot">
-                <span>Explore all tools</span>
-                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
-            </a>
-        </div>
-        <div class="tools-content">
-            <aside class="tools-sidebar">
-                <ul class="sidebar-nav">
-                    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="copilot">All Tools</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-customer-engagement">Customer Engagement</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-collaboration-productivity">Collaboration & Productivity</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-finance">Finance</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-sales-crm">Sales & CRM</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-hr-payroll">HR & Payroll</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-security-compliance">Security & Compliance</button></li>
-                </ul>
-            </aside>
-            <div class="post-feed tools-posts">
-                {{#get "posts" include="tags" filter="tags:[copilot]" order="published_at desc"}}
-                    {{#foreach posts}}
-                        {{> "post-card"}}
-                    {{/foreach}}
-                {{/get}}
-                {{pagination}}
-            </div>
-        </div>
-    </div>
 </section>
 
 </main>

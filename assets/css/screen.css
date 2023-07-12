@@ -1055,7 +1055,7 @@ article.post-card:hover{
 }
 
 .tag-copilot .post-card-excerpt {
-    -webkit-line-clamp: unset;
+    -webkit-line-clamp: unset !important;
 }
 
 :is(.tag-template, .author-template) .post-card-excerpt {
