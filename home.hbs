@@ -71,7 +71,7 @@ into the {body} of the default.hbs template --}}
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:[{{@custom.featured_one_tag}}]" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags:[decode]" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
@@ -123,7 +123,7 @@ into the {body} of the default.hbs template --}}
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:[{{@custom.featured_two_section_tag}}]" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags:[foundry]" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
