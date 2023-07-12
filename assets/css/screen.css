@@ -1054,6 +1054,10 @@ article.post-card:hover{
     -webkit-line-clamp: 2;
 }
 
+.tag-copilot .post-card-excerpt {
+    -webkit-line-clamp: unset;
+}
+
 :is(.tag-template, .author-template) .post-card-excerpt {
     margin-top: 6px;
 }
@@ -2567,7 +2571,7 @@ the right place. Onward!
  }
 
  article.post-card.tag-copilot .post-card-image {
-    width: 10rem;
+    width: 52px;
     border-radius: var(--global-radius);
 }
 
