@@ -71,7 +71,7 @@ into the {body} of the default.hbs template --}}
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:{{@custom.featured_one_tag}}" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags:[{{@custom.featured_one_tag}}]" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
@@ -85,7 +85,7 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed-header section">
             <h2 class="post-feed-title">Tools</h2>
             <a class="explore-more-btn" href="tag/{{@custom.resources_tag}}">
-                <span>Explore all</span>
+                <span>Explore all tools</span>
                 <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
@@ -117,13 +117,13 @@ into the {body} of the default.hbs template --}}
     <div class="inner posts">
         <div class="post-feed-header section">
             <h2 class="post-feed-title">{{@custom.featured_two_section_heading}}</h2>
-            <a class="explore-more-btn" href="tag/{{@custom.featured_two_tag}}">
+            <a class="explore-more-btn" href="tag/{{@custom.featured_two_section_tag}}">
                 <span>Explore more</span>
                 <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:{{@custom.featured_one_tag}}" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags:[{{@custom.featured_two_section_tag}}]" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
