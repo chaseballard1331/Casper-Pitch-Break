@@ -380,6 +380,7 @@
   .promo-button {
     background-color: white;
     padding: 1em;
+    border-radius: var(--global-radius);
     span {
       color: var(--ghost-accent-color);
     }
