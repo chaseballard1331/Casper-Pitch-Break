@@ -2091,6 +2091,7 @@ iframe.instagram-media + script + :not([id]) {
     margin: 0 0 20px;
     padding: 0;
     list-style: none;
+    flex-direction: column;
 }
 
 .site-footer-nav li {
@@ -2109,7 +2110,6 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer-nav li:not(:first-child) a:before {
-    content: "";
     display: block;
     width: 2px;
     height: 2px;
