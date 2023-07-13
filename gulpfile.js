@@ -12,7 +12,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
 const fs = require('fs');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 
 // postcss plugins
 const autoprefixer = require('autoprefixer');
