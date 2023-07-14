@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Setup .npmrc file to access private npm packages
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Install Yarn
         run: npm install -g yarn
 
