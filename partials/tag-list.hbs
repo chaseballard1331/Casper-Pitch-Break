@@ -1,7 +1,9 @@
 <ul class="sidebar-nav">
-  {{#get 'tags' limit='all'}}
-    {{#foreach tags}}
-      <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
+  {{#get "posts" filter="tags:[copilot]" include="tags"}}
+    {{#foreach posts}}
+      {{#foreach tags}}
+        <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
+      {{/foreach}}
     {{/foreach}}
   {{/get}}
 </ul>
