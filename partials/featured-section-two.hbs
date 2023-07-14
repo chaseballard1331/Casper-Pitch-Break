@@ -8,7 +8,7 @@
             </a>
         </div>
         <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="slug:[{{@custom.featured_two_tag}}]" order="published_at desc"}}
+            {{#get "posts" limit="3" include="tags" filter="tags.slug:[{{@custom.featured_two_tag}}]" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
