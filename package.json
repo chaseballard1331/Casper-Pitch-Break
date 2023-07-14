@@ -179,6 +179,26 @@
                 "default": "tools-customer-engagement",
                 "group": "homepage"
             },
+            "featured_one_section_heading": {
+                "type": "text",
+                "default": "Pitch Breakdowns",
+                "group": "homepage"
+            },
+            "featured_one_tag": {
+                "type": "text",
+                "default": "decode",
+                "group": "homepage"
+            },
+            "featured_two_section_heading": {
+                "type": "text",
+                "default": "Recent Articles",
+                "group": "homepage"
+            },
+            "featured_two_tag": {
+                "type": "text",
+                "default": "foundry",
+                "group": "homepage"
+            },
             "enable_table_of_contents": {
                 "type": "boolean",
                 "default": true,
