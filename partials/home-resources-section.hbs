@@ -11,16 +11,13 @@
             <aside class="tools-sidebar">
                 <ul class="sidebar-nav">
                     <li><button class="sidebar-button tag-button all-tools-button active" data-tag="{{@custom.resources_tag}}">All Tools</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-customer-engagement">Customer Engagement</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-collaboration-productivity">Collaboration & Productivity</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-finance">Finance</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-sales-crm">Sales & CRM</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-hr-payroll">HR & Payroll</button></li>
-                    <li><button class="sidebar-button tag-button" data-tag="tools-security-compliance">Security & Compliance</button></li>
+                    {{#foreach @custom.tags}}
+                        <li><button class="sidebar-button tag-button" data-tag="tools-{{slug}}">{{name}}</button></li>
+                    {{/foreach}}
                 </ul>
             </aside>
             <div class="post-feed tools-posts">
-                {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" order="published_at desc" as |posts|}}
+                {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
                     {{#if posts}}
                         {{#foreach posts}}
                             {{> "post-card"}}

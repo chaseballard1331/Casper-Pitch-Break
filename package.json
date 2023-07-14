@@ -172,7 +172,12 @@
             "resources_tag": {
                 "type": "text",
                 "default": "copilot",
-                "group": "post"
+                "group": "homepage"
+            },
+            "tags": {
+                "type": "text",
+                "default": "tools-customer-engagement",
+                "group": "homepage"
             },
             "enable_table_of_contents": {
                 "type": "boolean",
