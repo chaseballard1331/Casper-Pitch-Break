@@ -1,9 +1,7 @@
 <ul class="sidebar-nav">
     {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
-        {{log posts}}  <!-- Log the posts data -->
         {{#foreach posts}}
             {{#foreach tags}}
-                {{log this}}  <!-- Log the tag data -->
                 <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
             {{/foreach}}
         {{/foreach}}
