@@ -1,7 +1,9 @@
 <ul class="sidebar-nav">
-    {{#get "tags" limit="all" as |site_tags|}}
-        {{#foreach site_tags}}
-            <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
+    {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
+        {{#foreach posts}}
+            {{#foreach tags}}
+                <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
+            {{/foreach}}
         {{/foreach}}
     {{/get}}
 </ul>
