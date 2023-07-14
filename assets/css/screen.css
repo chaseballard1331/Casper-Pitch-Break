@@ -27,7 +27,7 @@ production stylesheet in assets/built/screen.css
 
 /* Import CSS reset and base styles */
 @import "global.css";
-@import "/assets/scss/main.scss";
+@import "../scss/main.scss";
 
 :root {
 
