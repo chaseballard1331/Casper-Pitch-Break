@@ -199,6 +199,11 @@
                 "default": "foundry",
                 "group": "homepage"
             },
+            "promo_banner_heading" {
+                "type": "text",
+                "default": "New breakdowns and advice delievered weekly to your inbox.",
+                "group": "homepage"
+            },
             "enable_table_of_contents": {
                 "type": "boolean",
                 "default": true,
