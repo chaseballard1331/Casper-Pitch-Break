@@ -20,12 +20,13 @@
                 </ul>
             </aside>
             <div class="post-feed tools-posts">
-                {{#get "posts" include="tags" filter="slug:[{{@custom.resources_tag}}]" order="published_at desc"}}
-                    {{#foreach posts}}
-                        {{> "post-card"}}
-                    {{/foreach}}
+                {{#get "posts" filter="tags:{{slug}}" include="tags" order="published_at desc" as |posts|}}
+                    {{#if posts}}
+                        {{#foreach posts}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    {{/if}}
                 {{/get}}
-                {{pagination}}
             </div>
         </div>
     </div>

@@ -1,0 +1,7 @@
+{{#if @custom.resource_tag}}
+  {{#get 'tags' filter='slug:[{{@custom.resource_tag}}]'}}
+    {{#foreach tags}}
+      {{> home-resources-section}}
+    {{/foreach}}
+  {{/get}}
+{{/if}}
