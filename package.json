@@ -213,6 +213,11 @@
                 "type": "text",
                 "default": "h1, h2",
                 "group": "post"
+            },
+            "enable_clarity_regions": {
+                "type": "boolean",
+                "default": false,
+                "group": "post"
             }
         }
     },
