@@ -9,13 +9,13 @@
         </div>
         <div class="tools-content">
             <aside class="tools-sidebar">
-                {{> "tag-list"}}
+                {{> tag-list}}
             </aside>
             <div class="post-feed tools-posts">
                 {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
                     {{#if posts}}
                         {{#foreach posts}}
-                            {{> "post-card"}}
+                            {{> post-card}}
                         {{/foreach}}
                     {{/if}}
                 {{/get}}
