@@ -65,6 +65,38 @@ into the {body} of the default.hbs template --}}
 
 {{> home-resources-section }}
 
+<script>
+// Create a Set to store the unique tags
+var uniqueTags = new Set();
+
+// Function to handle new sidebar items
+function handleNewSidebarItem(item) {
+    var tag = item.getAttribute('data-tag');
+    // If the tag is already in uniqueTags, remove the item
+    if (uniqueTags.has(tag)) {
+        item.remove();
+    } else {
+        // If the tag is not in uniqueTags, add it
+        uniqueTags.add(tag);
+    }
+}
+
+// Create a mutation observer to observe the sidebar and run handleNewSidebarItem whenever a new child is added
+var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList') {
+            mutation.addedNodes.forEach(handleNewSidebarItem);
+        }
+    });
+});
+
+// Add the mutation observer inside a DOMContentLoaded event listener to ensure that the sidebar is present on the DOM
+document.addEventListener('DOMContentLoaded', function() {
+    var sidebar = document.querySelector('.sidebar-nav');
+    observer.observe(sidebar, { childList: true });
+});
+</script>
+
 {{> featured-section-two }}
 
 {{> promo-banner }}
