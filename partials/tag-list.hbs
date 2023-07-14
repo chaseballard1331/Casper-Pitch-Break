@@ -1,5 +1,5 @@
 <ul class="sidebar-nav">
-    {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
+    {{#get "posts" filter="tags.slug:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
         {{#foreach posts}}
             {{#foreach tags}}
                 <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
