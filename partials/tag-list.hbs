@@ -1,0 +1,7 @@
+<ul class="sidebar-nav">
+    {{#get "tags" limit="all" as |site_tags|}}
+        {{#foreach site_tags}}
+            <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
+        {{/foreach}}
+    {{/get}}
+</ul>
