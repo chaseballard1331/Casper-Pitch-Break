@@ -1,0 +1,17 @@
+<section>
+    <div class="inner posts">
+        <div class="post-feed-header section">
+            <h2 class="post-feed-title">{{@custom.featured_one_section_heading}}</h2>
+            <a class="explore-more-btn" href="tag/{{@custom.featured_one_tag}}">
+                <span>Explore more</span>
+                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
+            </a>
+        </div>
+        <div class="post-feed">
+            {{#get "posts" limit="3" include="tags" filter="slug:[{{@custom.featured_one_tag}}]" order="published_at desc"}}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+</section>

@@ -61,56 +61,12 @@ into the {body} of the default.hbs template --}}
     </div>
 </section>
 
-<section>
-    <div class="inner posts">
-        <div class="post-feed-header section">
-            <h2 class="post-feed-title">{{@custom.featured_one_section_heading}}</h2>
-            <a class="explore-more-btn" href="tag/{{@custom.featured_one_tag}}">
-                <span>Explore more</span>
-                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
-            </a>
-        </div>
-        <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:[decode]" order="published_at desc"}}
-                {{#foreach posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/get}}
-        {{pagination}}
-        </div>
-</section>
+{{> featured-section-one }}
 
 {{> home-resources-section }}
 
-<section>
-    <div class="inner posts">
-        <div class="post-feed-header section">
-            <h2 class="post-feed-title">{{@custom.featured_two_section_heading}}</h2>
-            <a class="explore-more-btn" href="tag/{{@custom.featured_two_section_tag}}">
-                <span>Explore more</span>
-                <i class="fas fa-thin fa-lg fa-arrow-right-long"></i>
-            </a>
-        </div>
-        <div class="post-feed">
-            {{#get "posts" limit="3" include="tags" filter="tags:[foundry]" order="published_at desc"}}
-                {{#foreach posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/get}}
-        
-        {{pagination}}
+{{> featured-section-two}}
 
-        </div>
-</section>
-
-<section>
-    <div class="promo-banner">
-        <h2>New breakdowns and advice delievered weekly to your inbox.</h2>
-        <p>No spam. No bullshit.</p>
-        <a class="promo-button" href="#/portal" data-portal="">
-            <span>Subscribe</span>
-        </a>
-    </div>
-</section>
+{{> promo-banner }}
 
 </main>
