@@ -65,29 +65,6 @@ into the {body} of the default.hbs template --}}
 
 {{> home-resources-section }}
 
-<script>
-// Create a Set to store the unique tags
-var uniqueTags = new Set();
-
-// Add an event listener to the document that will handle click events
-document.addEventListener('DOMNodeInserted', function(e) {
-    var target = e.target;
-    
-    // If the inserted node is a list item and is inside the sidebar-nav
-    if (target.tagName === 'LI' && target.closest('.sidebar-nav')) {
-        var tag = target.getAttribute('data-tag');
-
-        // If the tag is already in uniqueTags, remove the item
-        if (uniqueTags.has(tag)) {
-            target.remove();
-        } else {
-            // If the tag is not in uniqueTags, add it
-            uniqueTags.add(tag);
-        }
-    }
-});
-</script>
-
 {{> featured-section-two }}
 
 {{> promo-banner }}

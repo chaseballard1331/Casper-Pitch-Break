@@ -1,9 +1,9 @@
 <ul class="sidebar-nav">
-  {{#get "posts" filter="tags:[copilot]" include="tags"}}
-    {{#foreach posts}}
-      {{#foreach tags}}
-        <li><button class="sidebar-button tag-button" data-tag="{{slug}}">{{name}}</button></li>
-      {{/foreach}}
-    {{/foreach}}
-  {{/get}}
+    <li><button class="sidebar-button tag-button all-tools-button active" data-tag="copilot">All Tools</button></li>
+    <li><button class="sidebar-button tag-button" data-tag="tools-customer-engagement">Customer Engagement</button></li>
+    <li><button class="sidebar-button tag-button" data-tag="tools-collaboration-productivity">Collaboration &amp; Productivity</button></li>
+    <li><button class="sidebar-button tag-button" data-tag="tools-finance">Finance</button></li>
+    <li><button class="sidebar-button tag-button" data-tag="tools-sales-crm">Sales &amp; CRM</button></li>
+    <li><button class="sidebar-button tag-button" data-tag="tools-hr-payroll">HR &amp; Payroll</button></li>
+    <li><button class="sidebar-button tag-button" data-tag="tools-security-compliance">Security &amp; Compliance</button></li>
 </ul>

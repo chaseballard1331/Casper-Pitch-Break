@@ -1,0 +1,29 @@
+.promo-banner {
+    background-color: var(--ghost-accent-color);
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5em;
+    margin-top: 4em;
+    border-radius: var(--global-radius);
+    flex-direction: column;
+    h2, p {
+      color: #fff;
+      text-align: center;
+      margin: auto;
+      margin-top: 2em;
+    }
+    .promo-button {
+      background-color: white;
+      padding: .5em 1em;
+      border-radius: var(--global-radius);
+      margin: auto;
+      margin-top: 2em;
+      span {
+        color: var(--ghost-accent-color);
+        font-weight: 700;
+        font-size: 1.6rem;
+      }
+    }
+  }
