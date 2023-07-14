@@ -1,8 +1,6 @@
 // Import all styles used on home.hbs //
 
-@import 'home/home.scss';
-
-@import 'home/promo-banner.scss';
-
-@import 'home/resources-sidebar.scss';
+@import 'home';
+@import 'promo-banner';
+@import 'resources-sidebar';
 
