@@ -186,7 +186,7 @@
             },
             "featured_one_tag": {
                 "type": "text",
-                "default": "decode",
+                "default": "pitch-breakdown",
                 "group": "homepage"
             },
             "featured_two_section_heading": {
@@ -199,7 +199,7 @@
                 "default": "foundry",
                 "group": "homepage"
             },
-            "promo_banner_heading" {
+            "promo_banner_heading": {
                 "type": "text",
                 "default": "New breakdowns and advice delievered weekly to your inbox.",
                 "group": "homepage"
