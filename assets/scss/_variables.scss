@@ -1,4 +1,4 @@
-$content-width: 960px; // Set the desired content width
+$content-width: 940px; // Set the desired content width
 $container-width: 1200px;
 $gap: 4.8vmin 4vmin; // Set the desired gap value
 
@@ -19,13 +19,6 @@ $error-secondary-text: red;
 $global-radius: 4px;
 $ghost-accent-transparent: #27a30012;
 $ghost-accent-color: #27a300;
-
-/*
-An accent color is also set by Ghost itself in
-Ghost Admin > Settings > Brand
-
-You can use this variable throughout your styles
-    */
 
 /* Fonts */
 $font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
