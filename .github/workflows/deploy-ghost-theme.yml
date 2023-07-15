@@ -25,6 +25,13 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Print SCSS files content
+        run: |
+          echo '==== _variables.scss content ===='
+          cat assets/scss/_variables.scss
+          echo '==== _global.scss content ===='
+          cat assets/scss/_global.scss
+
       - name: Build theme
         run: gulp build
 
