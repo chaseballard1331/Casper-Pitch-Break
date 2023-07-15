@@ -1,5 +1,6 @@
-@import './home/all.scss';
 @import 'global.scss';
+@import 'variables.scss';
+@import './home/all.scss';
 @import 'layout.scss';
 @import 'site-header.scss';
 @import 'site-navigation.scss';
@@ -15,4 +16,3 @@
 @import 'subscribe.scss';
 @import 'tag.scss';
 @import 'post-resources.scss';
-@import 'variables.scss';
