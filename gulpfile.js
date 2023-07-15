@@ -18,7 +18,9 @@ const sass = require('gulp-dart-sass');
 const autoprefixer = require('autoprefixer');
 const colorFunction = require('postcss-color-mod-function');
 const cssnano = require('cssnano');
-const easyimport = require('postcss-easy-import');
+const easyimport = require('postcss-easy-import')({
+    extensions: ['.scss'] // Add this line to specify the file extension
+  });
 
 const REPO = 'TryGhost/Casper';
 const REPO_READONLY = 'TryGhost/Casper';
