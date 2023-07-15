@@ -7,7 +7,7 @@
     height: 80px;
     object-fit: cover;
     margin: 0 0 2rem;
-    background: rgba(var($color-lightgrey), 0.9); /* Light grey at 90% opacity */
+    background: rgba($color-lightgrey, 0.9);
     border-radius: 50%;
 }
 
