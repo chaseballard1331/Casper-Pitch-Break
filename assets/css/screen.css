@@ -1,6 +1,0 @@
-/* 1. Global - Set up the things
-/* ---------------------------------------------------------- */
-
-/* Import CSS reset and base styles */
-@import "../scss/global.scss";
-@import "../scss/main.scss";
