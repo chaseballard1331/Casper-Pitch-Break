@@ -1,4 +1,4 @@
-/* 7. Author Template
+/* 7. Author Template */
 /* ---------------------------------------------------------- */
 
 .author-profile-pic {
@@ -26,21 +26,25 @@
 
 .author-profile-social-link {
     font-size: 1.3rem;
-    color: var($color-secondary-text);
-}
+    color: $color-secondary-text;
 
-.author-profile-social-link:hover {
-    color: var($color-darkgrey);
-}
+    &:hover {
+        color: $color-darkgrey;
+    }
 
-.author-profile-social-link svg {
-    width: 16px;
-    height: 16px;
+    svg {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 @media (min-width: 1001px) {
-    .author-template .post-card-large .post-card-content:only-child {
-        grid-column: span 2;
-        max-width: 640px;
+    .author-template {
+        .post-card-large {
+            .post-card-content:only-child {
+                grid-column: span 2;
+                max-width: 640px;
+            }
+        }
     }
 }

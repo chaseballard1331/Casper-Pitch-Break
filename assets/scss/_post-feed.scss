@@ -38,7 +38,7 @@
 article.post-card{
     border: 1px #ebeef0 solid;
     padding: 24px;
-    border-radius: var($global-radius);
+    border-radius: $global-radius;
 }
 
 article.post-card:hover{
@@ -87,7 +87,7 @@ article.post-card:hover{
     inset: 0;
     width: 100%;
     height: 100%;
-    background: var($color-lightgrey) no-repeat center center;
+    background: $color-lightgrey no-repeat center center;
     object-fit: cover;
 }
 
@@ -111,7 +111,7 @@ article.post-card:hover{
 .post-card-content-link {
     position: relative;
     display: block;
-    color: var($color-darkgrey);
+    color: $color-darkgrey;
 }
 
 .post-card-content-link:hover {
@@ -131,7 +131,7 @@ article.post-card:hover{
     align-items: center;
     gap: 12px;
     margin: 0 0 10px;
-    color: var($color-secondary-text);
+    color: $color-secondary-text;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: -0.005em;
@@ -144,7 +144,7 @@ article.post-card:hover{
     align-items: center;
     gap: 3px;
     padding-left: 18px;
-    color: var($ghost-accent-color) !important;
+    color: $ghost-accent-color !important;
 }
 
 .post-card-featured svg {
@@ -168,7 +168,7 @@ article.post-card:hover{
 }
 
 .has-serif-title .post-card-title {
-    font-family: var($font-serif);
+    font-family: $font-serif;
     letter-spacing: -0.005em;
 }
 
@@ -196,7 +196,7 @@ article.post-card:hover{
 }
 
 .has-sans-body .post-card-excerpt {
-    font-family: var($font-sans);
+    font-family: $font-sans;
 }
 
 .post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(.no-image) .post-card-excerpt {
@@ -218,7 +218,7 @@ article.post-card:hover{
     margin-top: 12px;
     padding: 0;
     font-size: 1.3rem;
-    color: var($color-secondary-text);
+    color: $color-secondary-text;
 }
 
 .post-card-meta > * {
@@ -231,7 +231,7 @@ article.post-card:hover{
     width: 2px;
     height: 2px;
     content: "";
-    background-color: var($color-secondary-text);
+    background-color: $color-secondary-text;
     border-radius: 50%;
 }
 
@@ -243,7 +243,7 @@ article.post-card:hover{
     display: block;
     width: 100%;
     height: 100%;
-    background: color-mod(var($color-lightgrey) l(+10%));
+    background: color-mod($color-lightgrey l(+10%));
     border-radius: 100%;
 
     object-fit: cover;
@@ -380,7 +380,7 @@ html.no-infinite-scroll .pagination {
 
 .pagination .page-number {
     grid-column-start: 2;
-    color: var($color-secondary-text);
+    color: $color-secondary-text;
 }
 
 .pagination .older-posts {
@@ -399,7 +399,7 @@ html.no-infinite-scroll .pagination {
 
 article.post-card.tag-copilot .post-card-image {
     width: 52px;
-    border-radius: var($global-radius);
+    border-radius: $global-radius;
 }
 
 article.post-card.tag-copilot a.post-card-image-link {

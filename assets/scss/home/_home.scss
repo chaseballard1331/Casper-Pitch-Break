@@ -20,7 +20,7 @@
 
 .home-template.has-cover .gh-head-button {
   color: #fff;
-  background-color: var($color-darkgrey);
+  background-color: $color-darkgrey;
 }
 
 /* Define the size of the sections */
@@ -73,7 +73,7 @@
 }
 
 .p-hero-left a {
-  color: var($ghost-accent-color);
+  color: $ghost-accent-color;
   /* Color links with the Ghost accent color defined in Admin */
 }
 
@@ -92,13 +92,13 @@
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.005em;
-  background-color: var($ghost-accent-color);
-  border: 3px solid var($ghost-accent-color);
-  border-radius: var($global-radius);
+  background-color: $ghost-accent-color;
+  border: 3px solid $ghost-accent-color;
+  border-radius: $global-radius;
 }
 
 .p-hero-buttons a {
-  color: var($ghost-accent-color);
+  color: $ghost-accent-color;
   background-color: transparent;
   border: 3px solid;
   transition: all 0.2s;
@@ -106,8 +106,8 @@
 
 .p-hero-buttons a:hover {
   color: #fff;
-  background-color: var($ghost-accent-color);
-  border-color: var($ghost-accent-color);
+  background-color: $ghost-accent-color;
+  border-color: $ghost-accent-color;
 }
 
 /* Posts */
@@ -141,7 +141,7 @@
 }
 
 .p-post-card a:hover {
-  color: var($ghost-accent-color);
+  color: $ghost-accent-color;
 }
 
 /* Change layout at larger viewport sizes */
@@ -260,7 +260,7 @@
   text-decoration: none;
   background-color: transparent;
   padding: 0em 1em;
-  border-radius: var($global-radius);
+  border-radius: $global-radius;
 }
 
 .explore-more-btn:hover {
