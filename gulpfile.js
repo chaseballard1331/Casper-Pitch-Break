@@ -47,7 +47,7 @@ function hbs(done) {
 
 function css(done) {
     pump([
-        src('assets/css/*.css', {sourcemaps: true}),
+        src('assets/css/*.css', {sourcemaps: false}),
         postcss([
             easyimport,
             colorFunction(),
@@ -61,7 +61,7 @@ function css(done) {
 
 function scss(done) {
     pump([
-        src('assets/scss/**/*.scss', {sourcemaps: true}),
+        src('assets/scss/**/*.scss', {sourcemaps: false}),
         sass().on('error', sass.logError),
         dest('assets/css', {sourcemaps: '.'}),
         livereload()
