@@ -7,7 +7,7 @@
     height: 80px;
     object-fit: cover;
     margin: 0 0 2rem;
-    background: color-mod(var(--color-lightgrey) l(+10%));
+    background: rgba(var(--color-lightgrey), 0.9); /* Light grey at 90% opacity */
     border-radius: 50%;
 }
 

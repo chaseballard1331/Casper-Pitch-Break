@@ -393,3 +393,19 @@ html.no-infinite-scroll .pagination {
         display: none;
     }
 }
+
+/* Special styling for {{@custom.resource_tag}} posts
+/* ---------------------------------------------------------- */
+
+article.post-card.tag-{{@custom.resource_tag}} .post-card-image {
+    width: 52px;
+    border-radius: var(--global-radius);
+}
+
+article.post-card.tag-copilot a.post-card-image-link {
+    margin-bottom: 2rem;
+}
+
+article.post-card.post.tag-copilot {
+    flex-direction: column !important;
+}

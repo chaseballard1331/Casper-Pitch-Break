@@ -1,0 +1,31 @@
+.resources-header{
+    display: flex;
+    margin-bottom: 2em;
+    gap: 2em;
+ }
+
+ .resources-header figure{
+    display: flex;
+    flex: 1;
+    max-width: 10em;
+ }
+
+ .resources-header .article-title{
+    margin: auto 1em;
+    flex: 1;
+    font-size: 1em;
+ }
+
+ .resources-header .article-excerpt{
+    font-weight: normal;
+ }
+
+ .gh-canvas .article-image {
+    margin: auto;
+ }
+
+ @media (max-width: 767px) {
+    .resources-header .article-excerpt {
+        font-size: .8em;
+    }
+ }
