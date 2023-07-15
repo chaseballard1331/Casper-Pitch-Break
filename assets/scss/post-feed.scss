@@ -397,7 +397,7 @@ html.no-infinite-scroll .pagination {
 /* Special styling for {{@custom.resource_tag}} posts
 /* ---------------------------------------------------------- */
 
-article.post-card.tag-{{@custom.resource_tag}} .post-card-image {
+article.post-card.tag-copilot .post-card-image {
     width: 52px;
     border-radius: var(--global-radius);
 }
