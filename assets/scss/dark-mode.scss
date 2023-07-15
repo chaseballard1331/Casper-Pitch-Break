@@ -11,7 +11,7 @@ html.dark-mode img {
 }
 
 html.dark-mode kbd {
-    background: rgba(var(--color-darkmode), 0.95); /* Dark mode color at 95% opacity */
+    background: color-mod(var(--color-darkmode) l(+5%));
 }
 
 html.dark-mode figcaption a {
