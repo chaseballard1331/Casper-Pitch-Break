@@ -19,7 +19,7 @@
 }
 
 .article-byline-meta {
-    color: var(--color-secondary-text);
+    color: var($color-secondary-text);
     font-size: 1.4rem;
     line-height: 1.2em;
 }
@@ -44,7 +44,7 @@
     height: min(56px, 13.6vmin);
     border: #fff 2px solid;
     border-radius: 50%;
-    background-color: var(--color-border);
+    background-color: var($color-border);
 }
 
 .page-template .article-title {

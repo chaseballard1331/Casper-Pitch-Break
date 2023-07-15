@@ -4,7 +4,7 @@
 .site-header {
     position: relative;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: var($ghost-accent-color);
 }
 
 .site-header-cover {
@@ -25,12 +25,12 @@
     align-items: center;
     padding-top: calc(1vmin + 44px);
     text-align: center;
-    color: var(--color-darkgrey);
+    color: var($color-darkgrey);
 }
 
 .has-cover .site-header-content {
     min-height: 560px;
-    background-color: var(--ghost-accent-color);
+    background-color: var($ghost-accent-color);
     color: #fff;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .has-serif-title .site-title {
-    font-family: var(--font-serif);
+    font-family: var($font-serif);
 }
 
 .has-cover .site-title {
@@ -115,7 +115,7 @@
 }
 
 .site-title + .site-description {
-    color: var(--color-secondary-text);
+    color: var($color-secondary-text);
 }
 
 .has-cover .site-description {

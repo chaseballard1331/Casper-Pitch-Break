@@ -25,7 +25,7 @@
 }
 
 .comments .comment-count {
-    color: var(--color-midgrey);
+    color: var($color-midgrey);
     font-weight: 600;
     white-space: nowrap;
 }

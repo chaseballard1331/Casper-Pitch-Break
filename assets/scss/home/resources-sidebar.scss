@@ -54,7 +54,7 @@
     background-color: transparent;
     cursor: pointer; /* Changes cursor to hand on hover */
     border: 1px solid transparent;
-    border-radius: var(--global-radius)
+    border-radius: var($global-radius)
   }
   
   .sidebar-button:hover {
@@ -62,9 +62,9 @@
   }
   
   .sidebar-button:active {
-    background-color: var(--ghost-accent-transparent);
-    border: 1px solid var(--ghost-accent-color);
-    border-radius: var(--global-radius);
+    background-color: var($ghost-accent-transparent);
+    border: 1px solid var($ghost-accent-color);
+    border-radius: var($global-radius);
   }
   
   .fa-arrow-right-long:before, .fa-long-arrow-right:before {
@@ -75,6 +75,6 @@
   
   .tag-button.active {
     background-color: transparent;
-    border: 1px solid var(--ghost-accent-color);
-    border-radius: var(--global-radius);
+    border: 1px solid var($ghost-accent-color);
+    border-radius: var($global-radius);
   }

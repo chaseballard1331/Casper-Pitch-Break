@@ -7,7 +7,7 @@
     height: 80px;
     object-fit: cover;
     margin: 0 0 2rem;
-    background: rgba(var(--color-lightgrey), 0.9); /* Light grey at 90% opacity */
+    background: rgba(var($color-lightgrey), 0.9); /* Light grey at 90% opacity */
     border-radius: 50%;
 }
 
@@ -26,11 +26,11 @@
 
 .author-profile-social-link {
     font-size: 1.3rem;
-    color: var(--color-secondary-text);
+    color: var($color-secondary-text);
 }
 
 .author-profile-social-link:hover {
-    color: var(--color-darkgrey);
+    color: var($color-darkgrey);
 }
 
 .author-profile-social-link svg {
