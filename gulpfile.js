@@ -63,7 +63,7 @@ function css(done) {
 
 function scss(done) {
     pump([
-        src('assets/scss/main.scss', {sourcemaps: true}), // Update the source file to main.scss
+        src('assets/scss/_main.scss', {sourcemaps: true}), // Update the source file to main.scss
         sass().on('error', sass.logError),
         dest('assets/css', {sourcemaps: '.'}),
         livereload()
