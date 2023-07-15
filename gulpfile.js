@@ -99,10 +99,10 @@ function zipper(done) {
     ], handleError(done));
 }
 
-const cssWatcher = () => watch('assets/css/**', css);
+const cssWatcher = () => watch('assets/css/**', series(scss, css));
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const scssWatcher = () => watch('assets/scss/**', scss);
+const scssWatcher = () => watch('assets/scss/**', series(scss, css));
 const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher, scssWatcher);
 
 const build = series(scss, css, js); // modified this line to include scss
