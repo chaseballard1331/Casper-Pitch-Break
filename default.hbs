@@ -19,57 +19,6 @@
     {{!-- TOC Stylesheet --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
 
-    <style>
-        .gh-content {
-            position: relative;
-        }
-
-        .gh-toc > .toc-list {
-            position: relative;
-        }
-
-        .toc-list {
-            overflow: hidden;
-            list-style: none;
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-
-        .toc-list li {
-            line-height: 1.5em;
-        }
-
-        .toc-list-heading {
-            font-size: 1.5rem;
-            margin-bottom: .75em;
-            font-weight: 700;
-        }
-
-        @media (min-width: 1300px) {
-            .gh-sidebar {
-                position: sticky; 
-                top: 4vmin;
-                bottom: 0;
-                grid-column: wide-start / main-start; /* Place the TOC to the left of the content */
-                margin-left: 7em;
-            }
-        }
-
-        @media (max-width: 1300px) {
-            .gh-sidebar {
-                box-shadow: 0 5px 20px 0 rgba(0,0,0,.08);
-                border: 1px solid #ebeef0;
-                border-radius: var(--global-radius);
-                padding: 20px;
-            }
-        }
-
-        .gh-toc .is-active-link::before {
-            background-color: var(--ghost-accent-color); /* Defines TOC   accent color based on Accent color set in Ghost Admin */
-        } 
-
-    </style>
-
     {{!-- Hide sidebar if no TOC content --}}
     <script>
         window.onload = function () {
@@ -203,16 +152,7 @@
         {{{body}}}
     </div>
 
-    {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer outer">
-        <div class="inner">
-            <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
-            </nav>
-            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
-        </div>
-    </footer>
+    {{> footer}}
 
 </div>
 {{!-- /.viewport --}}

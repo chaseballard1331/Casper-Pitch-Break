@@ -1,10 +1,10 @@
 <section class="gh-content gh-canvas">
-        {{#if @custom.enable_table_of_contents}}
-            <aside class="gh-sidebar">
-                <p class="toc-list-heading">On this page</p>
-                <div class="gh-toc">
-                </div>
-            </aside> {{! The TOC will be inserted here }}
-        {{/if}}
-        {{content}}
-    </section>
+    {{#if @custom.enable_table_of_contents}}
+    <aside class="gh-sidebar">
+        <p class="toc-list-heading">On this page</p>
+        <div class="gh-toc">
+        </div>
+    </aside> {{! The TOC will be inserted here }}
+    {{/if}}
+    {{content}}
+</section>
