@@ -63,7 +63,7 @@ which templates loop over to generate a list of posts. --}}
             {{/if}}
         </a>
 
-        {{#has tag="copilot"}}
+        {{#has slug=@custom.resources_tag}}
         <!-- No Footer -->
         {{^}}
         <footer class="post-card-meta">
