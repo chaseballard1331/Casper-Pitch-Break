@@ -64,9 +64,6 @@ which templates loop over to generate a list of posts. --}}
             {{/if}}
         </a>
 
-        {{#has tag="copilot"}}
-        <!-- No Footer -->
-        {{^}}
         <footer class="post-card-meta">
             <time class="post-card-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
             {{#if reading_time}}
@@ -76,7 +73,6 @@ which templates loop over to generate a list of posts. --}}
             {{comment_count}}
             {{/if}}
         </footer>
-        {{/has}}
     </div>
 
 </article>
