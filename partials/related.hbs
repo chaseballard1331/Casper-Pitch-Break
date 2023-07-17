@@ -5,15 +5,15 @@
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
-    {{#get "posts" limit="3" as |more_posts|}}
-    {{#if more_posts}}
-        <aside class="read-more-wrap outer">
-            <div class="read-more inner">
-                {{#foreach more_posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            </div>
-        </aside>
-    {{/if}}
-{{/get}}
+    {{#get "posts" filter="tags:[{{primary_tag.slug}}]+id:-{{id}}" limit="3" as |more_posts|}}
+        {{#if more_posts}}
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                    {{#foreach more_posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                </div>
+            </aside>
+        {{/if}}
+    {{/get}}
 {{/if}}
