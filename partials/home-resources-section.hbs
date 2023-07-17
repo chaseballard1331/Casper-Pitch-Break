@@ -15,7 +15,7 @@
                 {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
                     {{#if posts}}
                         {{#foreach posts}}
-                            {{> post-card showDate=False }}
+                            {{> post-card date=False }}
                         {{/foreach}}
                     {{/if}}
                 {{/get}}
