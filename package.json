@@ -143,7 +143,7 @@
             },
             "resources_tag": {
                 "type": "text",
-                "default": "copilot",
+                "default": "resource",
                 "group": "homepage"
             },
             "featured_one_section_heading": {

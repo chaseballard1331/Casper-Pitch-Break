@@ -203,10 +203,6 @@ article.post-card:hover{
     -webkit-line-clamp: 2;
 }
 
-.tag-copilot .post-card-excerpt {
-    -webkit-line-clamp: unset !important;
-}
-
 :is(.tag-template, .author-template) .post-card-excerpt {
     margin-top: 6px;
 }
@@ -397,16 +393,20 @@ html.no-infinite-scroll .pagination {
 /* Special styling for {{@custom.resource_tag}} posts
 /* ---------------------------------------------------------- */
 
-article.post-card.tag-copilot .post-card-image {
+article.post-card.tag-resource .post-card-image {
     width: 7em;
     height: auto;
     border-radius: $global-radius;
 }
 
-article.post-card.tag-copilot a.post-card-image-link {
+article.post-card.tag-resource a.post-card-image-link {
     margin-bottom: 2rem;
 }
 
-article.post-card.post.tag-copilot {
+article.post-card.post.tag-resource {
     flex-direction: column !important;
+}
+
+.tag-resource .post-card-excerpt {
+    -webkit-line-clamp: unset !important;
 }
