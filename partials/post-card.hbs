@@ -3,7 +3,7 @@ which templates loop over to generate a list of posts. --}}
 
 <article class="post-card {{post_class}}{{#is "home" }}{{#has index="0" }}
     keep-ratio{{/has}}{{/is}}{{#is "home, paged" }}
-    keep-ratio{{/is}}{{#unless access}} post-access-{{visibility}}{{/unless}} {{#if @custom.resource_tag}} test-class {{/if}}">
+    keep-ratio{{/is}}{{#unless access}} post-access-{{visibility}}{{/unless}} {{#if @custom.resources_section}} test-class {{/if}}">
 
     {{#if feature_image}}
     <a class="post-card-image-link" href="{{url}}">
