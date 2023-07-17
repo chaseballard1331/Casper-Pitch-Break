@@ -9,8 +9,10 @@
     background: darken($color-darkgrey, 5%);
 
     .inner {
-        display: grid;
+        display: flex;
         grid-gap: 40px;
+        flex-direction: row;
+        justify-content: space-between;
         grid-template-columns: auto 1fr auto;
         color: rgba(255,255,255,0.7);
         font-size: 1.3rem;
@@ -20,6 +22,7 @@
             grid-template-columns: 1fr;
             grid-gap: 0;
             text-align: center;
+            flex-direction: column;
         }
     }
 
