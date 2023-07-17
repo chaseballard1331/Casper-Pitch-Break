@@ -36,7 +36,7 @@ which templates loop over to generate a list of posts. --}}
         <a class="post-card-content-link" href="{{url}}">
             <header class="post-card-header">
                 <div class="post-card-tags">
-                    {{#has tag="copilot"}}
+                    {{#has slug=@custom.resources_tag}}
                     <!-- No Tag -->
                     {{^}}
                     {{#primary_tag}}
