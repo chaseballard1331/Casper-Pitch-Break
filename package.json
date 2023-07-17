@@ -150,11 +150,6 @@
                 "default": "copilot",
                 "group": "homepage"
             },
-            "tags": {
-                "type": "text",
-                "default": "tools-customer-engagement",
-                "group": "homepage"
-            },
             "featured_one_section_heading": {
                 "type": "text",
                 "default": "Pitch Breakdowns",
