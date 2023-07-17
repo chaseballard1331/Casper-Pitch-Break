@@ -37,7 +37,7 @@ which templates loop over to generate a list of posts. --}}
         <a class="post-card-content-link" href="{{url}}">
             <header class="post-card-header">
                 <div class="post-card-tags">
-                    {{#has tag="{{@custom.resources_tag}}"}}
+                    {{#has tag="copilot"}}
                     <!-- No Tag -->
                     {{^}}
                     {{#primary_tag}}
@@ -64,21 +64,19 @@ which templates loop over to generate a list of posts. --}}
             {{/if}}
         </a>
 
-        {{#foreach tags}}
-    {{#has slug={{@custom.resources_tag}}}}
-    <!-- No Footer -->
-    {{else}}
-    <footer class="post-card-meta">
-        <time class="post-card-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
-        {{#if reading_time}}
-        <span class="post-card-meta-length">{{reading_time}}</span>
-        {{/if}}
-        {{#if @site.comments_enabled}}
-        {{comment_count}}
-        {{/if}}
-    </footer>
-    {{/has}}
-{{/foreach}}
+        {{#has tag="copilot"}}
+        <!-- No Footer -->
+        {{^}}
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
+            {{#if reading_time}}
+            <span class="post-card-meta-length">{{reading_time}}</span>
+            {{/if}}
+            {{#if @site.comments_enabled}}
+            {{comment_count}}
+            {{/if}}
+        </footer>
+        {{/has}}
     </div>
 
 </article>
