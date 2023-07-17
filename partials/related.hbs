@@ -8,7 +8,7 @@
     {{#get "posts" filter="tags:[{{primary_tag.slug}}]+id:-{{id}}" limit="3" as |more_posts|}}
         {{#if more_posts}}
             <aside class="read-more-wrap outer">
-                <div class="read-more inner {{#if}} tag-resource {{/if}}"">
+                <div class="read-more inner {{#if}} tag-resource {{/if}}">
                     {{#foreach more_posts}}
                         {{> "post-card"}}
                     {{/foreach}}
