@@ -59,6 +59,13 @@
         padding: 0;
         list-style: none;
         flex-direction: column;
+        column-count: 2; 
+
+        @media (max-width: 767px) {
+            .site-footer-nav ul {
+                column-count: 1; /* Single column on small screens */
+            }
+        }
     }
 
     li {
