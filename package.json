@@ -89,15 +89,6 @@
         },
         "card_assets": true,
         "custom": {
-            "navigation_layout": {
-                "type": "select",
-                "options": [
-                    "Logo on cover",
-                    "Logo in the middle",
-                    "Stacked"
-                ],
-                "default": "Stacked"
-            },
             "title_font": {
                 "type": "select",
                 "options": [
@@ -114,11 +105,6 @@
                 ],
                 "default": "Elegant serif"
             },
-            "show_publication_cover": {
-                "type": "boolean",
-                "default": false,
-                "group": "homepage"
-            },
             "header_style": {
                 "type": "select",
                 "options": [
@@ -127,16 +113,6 @@
                     "Hidden"
                 ],
                 "default": "Hidden",
-                "group": "homepage"
-            },
-            "feed_layout": {
-                "type": "select",
-                "options": [
-                    "Classic",
-                    "Grid",
-                    "List"
-                ],
-                "default": "Grid",
                 "group": "homepage"
             },
             "color_scheme": {
