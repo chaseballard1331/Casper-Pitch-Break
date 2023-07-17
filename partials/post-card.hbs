@@ -64,19 +64,21 @@ which templates loop over to generate a list of posts. --}}
             {{/if}}
         </a>
 
-        {{#has tag="{{@custom.resources_tag}}"}}
-        <!-- No Footer -->
-        {{^}}
-        <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
-            {{#if reading_time}}
-            <span class="post-card-meta-length">{{reading_time}}</span>
-            {{/if}}
-            {{#if @site.comments_enabled}}
-            {{comment_count}}
-            {{/if}}
-        </footer>
-        {{/has}}
+        {{#foreach tags}}
+    {{#has slug={{@custom.resources_tag}}}}
+    <!-- No Footer -->
+    {{else}}
+    <footer class="post-card-meta">
+        <time class="post-card-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
+        {{#if reading_time}}
+        <span class="post-card-meta-length">{{reading_time}}</span>
+        {{/if}}
+        {{#if @site.comments_enabled}}
+        {{comment_count}}
+        {{/if}}
+    </footer>
+    {{/has}}
+{{/foreach}}
     </div>
 
 </article>
