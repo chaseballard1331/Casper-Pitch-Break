@@ -46,7 +46,10 @@ into the {body} of the default.hbs template --}}
 
 {{> featured-section-one }}
 
-{{> home-resources-section }}
+{{#if @custom.resources_section}}
+    {{> home-resources-section }}
+    {{else}}
+{{/if}}
 
 {{> featured-section-two }}
 
