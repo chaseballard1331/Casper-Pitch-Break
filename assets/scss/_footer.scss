@@ -9,7 +9,7 @@
     background: darken($color-darkgrey, 5%);
 
     .inner {
-        display: grid;
+        display: flex;
         grid-gap: 40px;
         flex-direction: column;
         align-items: center;
@@ -37,14 +37,14 @@
 }
 
 .site-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        list-style: none;
         margin: 0 0 20px;
         padding: 0;
-        list-style: none;
-        flex-direction: column;
     }
 
     li {
