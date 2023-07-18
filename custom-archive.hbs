@@ -1,28 +1,13 @@
 {{!< default}}
 
-{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
-
-{{#post}}
-{{!-- Topper  {{> topper }} --}}
-
-  <div class='c-post {{ post_class }}'>
-    {{#get 'posts' limit='all' as |posts|}}
-      {{#if posts}}
-        {{#foreach posts}}
-          <div class='c-card-archive c-card-archive--date-{{date format='M'}}'>
-            <div class='c-card-archive__meta'>
-              <div class='c-card-archive__date u-type-uppercase'>{{ date format='MMMM YYYY' }}</div>
-            </div>
-
-            <div class='c-card-archive__content'>
-              <h2 class='c-card-archive__title'>
-                <time class='c-card-archive__date-mini' datetime='{{ date format='YYYY-MM-DD' }}'>{{ date format='D' }}:</time>
-                <a href='{{ url }}' class='c-card-archive__url'>{{ title }}</a>
-              </h2>
-            </div>
-          </div>
-        {{/foreach}}
-      {{/if}}
-    {{/get}}
-  </div>
-{{/post}}
+{{!< default}} {{#get 'posts' limit='all' order='published_at desc' }} <article class='content-wrap'>
+  {{#foreach posts visibility='all'}}
+  <a href='{{url}}' class='archive-post'>
+    <time datetime='{{date published_at format=' YYYY-MM-DD'}}' class='archive-post__date'>
+      {{date published_at format='DD MMM YYYY'}}
+    </time>
+    <h2 class='archive-post__title'>{{title}}</h2>
+  </a>
+  {{/foreach}}
+  </article>
+  {{/get}}
