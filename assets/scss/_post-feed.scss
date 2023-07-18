@@ -64,7 +64,7 @@ article.post-card:hover{
 .post-card-image-link::after {
     content: "";
     display: block;
-    padding-bottom: 55%;
+    padding-bottom: 10rem;
 }
 
 .post-card[class*="post-access-"] .post-card-image-link::after {
@@ -397,6 +397,10 @@ article.post-card.tag-resource .post-card-image {
     width: 7em;
     height: auto;
     border-radius: $global-radius;
+
+    @media (min-width: 990px) {
+
+    }
 }
 
 article.post-card.tag-resource a.post-card-image-link {
