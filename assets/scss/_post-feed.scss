@@ -64,7 +64,7 @@ article.post-card:hover{
 .post-card-image-link::after {
     content: "";
     display: block;
-    padding-bottom: 10rem;
+    padding-bottom: 55%;
 }
 
 .post-card[class*="post-access-"] .post-card-image-link::after {
@@ -413,4 +413,8 @@ article.post-card.post.tag-resource {
 
 .tag-resource .post-card-excerpt {
     -webkit-line-clamp: unset !important;
+}
+
+article.tag-resource .post-card-image {
+    padding-bottom: 10rem;
 }
