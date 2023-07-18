@@ -1,5 +1,8 @@
 .archive-post {
     margin: 0 0 24px;
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: $global-radius;
 }
 
 .archive-post:first-child .archive-post-label {
