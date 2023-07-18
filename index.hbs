@@ -6,10 +6,6 @@ into the {body} of the default.hbs template --}}
 
     {{#match @custom.header_style "!=" "Hidden"}}
         <div class="site-header-inner inner">
-            {{#if @site.logo}}
-                <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
-            {{else}}
-            {{/if}}
             {{#if @site.description}}
                 <p class="site-description">{{@site.description}}</p>
             {{/if}}
