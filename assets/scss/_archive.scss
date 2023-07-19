@@ -14,13 +14,14 @@
 }
 
 .archive-post-link {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--color-darkgrey) !important;
     margin-left: auto 1em;
 }
 
 .archive-post-link:hover {
     color: var(--ghost-accent-color) !important;
+    text-decoration: underline;
 }
 
 .archive-post-title {
