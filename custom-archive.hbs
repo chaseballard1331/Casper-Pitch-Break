@@ -1,9 +1,6 @@
 {{!< default}}
 
-<main id="site-main" class="site-main">
-<article class="article {{post_class}}">
-
-    <header class="article-header gh-canvas">
+ <header class="article-header gh-canvas">
 
         <h1 class="article-title">{{title}}</h1>
 
@@ -27,13 +24,6 @@
         {{/if}}
 
     </header>
-
-    <section class="gh-content gh-canvas">
-        {{content}}
-    </section>
-
-</article>
-</main>
 
 {{#get "posts" limit="all" order="published_at desc"}}
 {{#foreach posts visibility="all"}}
