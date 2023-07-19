@@ -56,3 +56,8 @@
 .archive-date {
     font-size: 1em;
 }
+
+.archive-post:not([style*="display: none"]) .archive-post-label:first-of-type {
+    color: red;
+    border: 1px solid red;
+}
