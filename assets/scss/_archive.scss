@@ -1,8 +1,7 @@
 .archive-post {
     margin: 0 0 24px;
     padding: 1em;
-    border: 1px solid gray;
-    border-radius: $global-radius;
+    display: flex;
 }
 
 .archive-post:first-child .archive-post-label {
@@ -18,7 +17,7 @@
 .archive-post-link {
     text-decoration: none !important;
     color: var(--color-darkgrey) !important;
-    margin-left: 1em;
+    margin-left: auto 1em;
 }
 
 .archive-post-link:hover {
@@ -50,7 +49,8 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0 auto;
+    max-width: 708px;
 }
 
 .archive-date {
