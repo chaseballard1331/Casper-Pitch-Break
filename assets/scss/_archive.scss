@@ -1,7 +1,7 @@
 .archive-post {
     margin: 0 0 24px;
     padding: 1em;
-    display: flex;
+    border-bottom: 1px solid black;
 }
 
 .archive-post:first-child .archive-post-label {
@@ -26,8 +26,9 @@
 
 .archive-post-title {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.4;
+    font-weight: 500;
 }
 
 .archive-post-date-1 + .archive-post-date-1 .archive-post-label,
