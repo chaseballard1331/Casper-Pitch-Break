@@ -143,7 +143,7 @@
         </div>
     </header>
 
-    <div class="site-content">
+    <div class="site-content {{#is "archive"}}archive-content{{/is}}">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
     </div>
