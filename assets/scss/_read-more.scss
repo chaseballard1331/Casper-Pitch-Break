@@ -45,3 +45,13 @@ article.tag-resource .post-card-image {
     height: auto;
     width: 7em;
 }
+
+body.tag-resource img.post-card-image {
+    height: auto;
+    width: 7em;
+    border-radius: $global-radius;
+}
+
+body.tag-resource .post-card-meta {
+    display: none;
+}
