@@ -52,6 +52,10 @@ body.tag-resource img.post-card-image {
     border-radius: $global-radius;
 }
 
+body.tag-resource img.post-card-image:after {
+    padding-bottom: 7em;
+}
+
 body.tag-resource .post-card-meta {
     display: none;
 }
