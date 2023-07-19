@@ -18,6 +18,7 @@
 .archive-post-link {
     text-decoration: none !important;
     color: var(--color-darkgrey) !important;
+    margin-left: 1em;
 }
 
 .archive-post-link:hover {
@@ -54,4 +55,12 @@
 
 .archive-date {
     font-size: 1em;
+}
+
+.visible-datetime {
+    background-color: lightgray;
+    padding: 3px 6px;
+    font-size: .75em;
+    font-weight: 600;
+    border-radius: 4px;
 }
