@@ -60,3 +60,7 @@
 .archive-post:not([style*="display: none"]) .archive-post-label:first-of-type {
     margin-top: 2em;
 }
+
+body.page-archive .site-content {
+    max-width: 980px;
+}
