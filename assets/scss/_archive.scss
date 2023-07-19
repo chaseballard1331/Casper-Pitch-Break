@@ -45,14 +45,6 @@
     display: none;
 }
 
-.site-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 708px;
-}
-
 .archive-date {
     font-size: 1em;
 }
@@ -63,4 +55,8 @@
 
 body.page-archive .site-content {
     max-width: 980px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
