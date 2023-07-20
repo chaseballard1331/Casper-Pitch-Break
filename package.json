@@ -141,6 +141,11 @@
                 "default": true,
                 "group": "post"
             },
+            "resources_heading": {
+                "type": "text",
+                "default": "resources",
+                "group": "homepage"
+            },
             "resources_tag": {
                 "type": "text",
                 "default": "resource",
