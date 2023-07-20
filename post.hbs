@@ -87,17 +87,19 @@ into the {body} tag of the default.hbs template --}}
     {{!-- table-of-contents partial is displayed here, unless viewed by a non-member for a members-only post --}}
     {{!-- table-of-contents partial is displayed here, unless viewed by a non-member for a members-only post --}}
     {{!-- table-of-contents partial is displayed here, unless viewed by a non-member for a members-only post --}}
-    {{#if @site.members_enabled}}
+    {{!-- table-of-contents partial is displayed here, unless viewed by a non-member for a members-only post --}}
+{{#if @site.members_enabled}}
     {{#if @member}}
-    {{> table-of-contents}}
+        {{> table-of-contents}}
     {{else}}
-    {{#if post.visibility "public"}}
+        {{#is post.visibility "public"}}
+            {{> table-of-contents}}
+        {{/is}}
+    {{/if}}
+{{else}}
     {{> table-of-contents}}
-    {{/if}}
-    {{/if}}
-    {{else}}
-    {{> table-of-contents}}
-    {{/if}}
+{{/if}}
+
 
     {{> comments}}
 
