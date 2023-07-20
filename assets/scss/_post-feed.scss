@@ -419,6 +419,7 @@ article.tag-resource .post-card-image {
     padding-bottom: 10rem;
 }
 
-body.page-resource article.tag-resource img.post-card-image:after {
+
+body.page-resource .post-card-image-link::after {
     padding-bottom: 7em;
 }
