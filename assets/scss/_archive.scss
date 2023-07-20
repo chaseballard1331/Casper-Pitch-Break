@@ -15,12 +15,12 @@
 
 .archive-post-link {
     text-decoration: none;
-    color: var(--color-darkgrey) !important;
+    color: $color-darkgrey !important;
     margin-left: auto 1em;
 }
 
 .archive-post-link:hover {
-    color: var(--ghost-accent-color) !important;
+    color: $ghost-accent-color !important;
     text-decoration: underline;
 }
 

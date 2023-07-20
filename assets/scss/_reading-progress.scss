@@ -15,5 +15,5 @@
   }
   
   .reading-progress::-webkit-progress-value {
-    background: var(--ghost-accent-color); /* Progress bar color */
+    background: $ghost-accent-color; /* Progress bar color */
   }

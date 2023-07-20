@@ -429,3 +429,9 @@ body.page-resources .post-card-image-link::after {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+@media (min-width: 640px) {
+    body.page-resources .post-feed {
+        grid-template-columns: 1fr 1fr;
+    }
+}
