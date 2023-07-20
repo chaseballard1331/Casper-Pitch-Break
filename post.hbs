@@ -84,7 +84,15 @@ into the {body} tag of the default.hbs template --}}
 
     </header>
 
-    {{> table-of-contents}}
+    {{#if @site.members_enabled}}
+    {{#unless @member}}
+    {{#unless access}}
+        {{> table-of-contents}}
+    {{/unless}}
+    {{/unless}}
+    {{else}}
+        {{> table-of-contents}}
+    {{/if}}
 
     {{> comments}}
 
