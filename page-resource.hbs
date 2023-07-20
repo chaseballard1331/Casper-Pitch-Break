@@ -1,6 +1,7 @@
 {{!< default}}
 
 <main id="site-main" class="site-main outer">
+    <h1 class="article-title">{{title}}</h1>
     <div class="inner posts">
         <div class="post-feed">
             {{#get "posts" filter="tags:[{{@custom.resources_tag}}]" include="tags" as |posts|}}
