@@ -85,11 +85,12 @@ into the {body} tag of the default.hbs template --}}
     </header>
 
     {{!-- table-of-contents partial is displayed here, unless viewed by a non-member for a members-only post --}}
+    {{!-- table-of-contents partial is displayed here, unless viewed by a non-member for a members-only post --}}
     {{#if @site.members_enabled}}
     {{#if @member}}
     {{> table-of-contents}}
     {{else}}
-    {{#unless access.member}}
+    {{#unless post.access}}
     {{> table-of-contents}}
     {{/unless}}
     {{/if}}
