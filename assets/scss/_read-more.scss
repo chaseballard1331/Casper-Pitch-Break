@@ -59,3 +59,7 @@ body.tag-resource img.post-card-image:after {
 body.tag-resource .post-card-meta {
     display: none;
 }
+
+body.tag-resource .post-card-image-link::after {
+    padding-bottom: 5em;
+}
