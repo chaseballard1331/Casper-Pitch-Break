@@ -261,6 +261,9 @@
   background-color: transparent;
   padding: 0em 1em;
   border-radius: $global-radius;
+    @media (min-width: 478px) {
+      margin-left: auto;
+    }
 }
 
 .explore-more-btn:hover {

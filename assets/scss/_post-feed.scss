@@ -419,6 +419,6 @@ article.tag-resource .post-card-image {
     padding-bottom: 10rem;
 }
 
-body.page-resource img.post-card-image {
+body.page-resource article.tag-resource img.post-card-image:after {
     padding-bottom: 7em;
 }
