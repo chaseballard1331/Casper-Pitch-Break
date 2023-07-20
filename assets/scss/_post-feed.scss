@@ -394,7 +394,7 @@ html.no-infinite-scroll .pagination {
 /* ---------------------------------------------------------- */
 
 article.post-card.tag-resource .post-card-image {
-    width: 7em;
+    width: 5em;
     height: auto;
     border-radius: $global-radius;
 
@@ -421,5 +421,5 @@ article.tag-resource .post-card-image {
 
 
 body.page-resource .post-card-image-link::after {
-    padding-bottom: 7em;
+    padding-bottom: 5em;
 }
