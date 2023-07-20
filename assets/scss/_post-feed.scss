@@ -423,3 +423,9 @@ article.tag-resource .post-card-image {
 body.page-resources .post-card-image-link::after {
     padding-bottom: 5em;
 }
+
+@media (max-width: 991px) {
+    body.page-resources .post-feed {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
