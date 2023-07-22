@@ -430,7 +430,7 @@ body.page-resources .post-card-image-link::after {
     }
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
     body.page-resources .post-feed {
         grid-template-columns: 1fr 1fr;
     }
