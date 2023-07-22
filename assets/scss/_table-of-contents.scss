@@ -23,23 +23,11 @@
     font-weight: 700;
 }
 
-@media (min-width: 1300px) {
-    .gh-sidebar {
-        position: sticky; 
-        top: 4vmin;
-        bottom: 0;
-        grid-column: wide-start / main-start; /* Place the TOC to the left of the content */
-        margin-left: 7em;
-    }
-}
-
-@media (max-width: 1300px) {
-    .gh-sidebar {
-        box-shadow: 0 5px 20px 0 rgba(0,0,0,.08);
-        border: 1px solid #ebeef0;
-        border-radius: var(--global-radius);
-        padding: 20px;
-    }
+.gh-sidebar {
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.08);
+    border: 1px solid #ebeef0;
+    border-radius: var(--global-radius);
+    padding: 20px;
 }
 
 .gh-toc .is-active-link::before {
