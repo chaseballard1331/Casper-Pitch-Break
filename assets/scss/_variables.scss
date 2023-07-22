@@ -18,7 +18,10 @@ $error-secondary-text: red;
 /* Other Variables */
 $global-radius: 4px;
 $ghost-accent-transparent: #27a30012;
-$ghost-accent-color: #27a300;
+
+/* Ghost Accent Color
+$ghost-accent-color: {value};
+*/
 
 /* Fonts */
 $font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
